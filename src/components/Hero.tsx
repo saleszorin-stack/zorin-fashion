@@ -1,0 +1,82 @@
+import Image from "next/image";
+import Link from "next/link";
+import { site } from "@/lib/site";
+
+export function Hero() {
+  const primaryPhone = site.phones[0];
+  const age = new Date().getFullYear() - site.stats.foundedYear;
+
+  return (
+    <section id="top" className="border-b border-border">
+      <div className="relative h-[72vh] min-h-[480px] w-full overflow-hidden">
+        <Image
+          src="/images/hero.jpg"
+          alt="Готовый пиджак классического кроя на вешалке"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-transparent" />
+
+        <div className="relative mx-auto flex h-full max-w-6xl items-center px-5 sm:px-8">
+          <div className="max-w-xl border-l-2 border-white/40 pl-6 sm:pl-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
+              Швейная фабрика · Бишкек · с {site.stats.foundedYear} года
+            </p>
+
+            <h1 className="font-serif text-balance mt-5 text-5xl font-semibold leading-[1.05] text-white sm:text-6xl md:text-7xl">
+              Мужская
+              <br />
+              классика.
+              <br />
+              <span className="italic text-white/85">Сшито в Кыргызстане.</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 sm:px-8 sm:py-16 md:grid-cols-[1.3fr_1fr]">
+        <p className="max-w-xl text-lg leading-relaxed text-muted">
+          ZORIN — поточное производство мужских костюмов, пиджаков, брюк и
+          жилетов полного цикла. Работаем с оптовыми партнёрами и
+          корпоративными заказчиками в Кыргызстане, России и Казахстане.
+        </p>
+
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 md:justify-end">
+          <a
+            href={`tel:${primaryPhone.raw}`}
+            className="inline-flex items-center rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-opacity hover:opacity-85"
+          >
+            Обсудить заказ
+          </a>
+          <Link
+            href="/produktsiya"
+            className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70"
+          >
+            Смотреть продукцию →
+          </Link>
+        </div>
+      </div>
+
+      <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-x-10 gap-y-6 border-t border-border px-5 py-10 sm:px-8 md:grid-cols-4 md:justify-between">
+        {[
+          { value: String(site.stats.foundedYear), label: `На рынке ${age} лет` },
+          { value: String(site.stats.employees), label: "Сотрудников" },
+          { value: `${site.stats.areaSqm.toLocaleString("ru-RU")} м²`, label: "Производственная площадь" },
+          { value: `${(site.stats.annualOutput / 1000).toFixed(0)} тыс.`, label: "Комплектов в год" },
+        ].map((stat) => (
+          <div key={stat.label} className="flex flex-col gap-1">
+            <dt className="sr-only">{stat.label}</dt>
+            <dd className="font-serif text-3xl font-semibold text-foreground sm:text-4xl">
+              {stat.value}
+            </dd>
+            <dd className="text-xs uppercase tracking-wide text-muted">
+              {stat.label}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  );
+}
