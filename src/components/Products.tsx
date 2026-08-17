@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Reveal } from "@/components/Reveal";
 
 const products = [
   {
@@ -43,8 +44,8 @@ const products = [
 export function Products() {
   return (
     <section id="products" className="border-b border-border">
-      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
-        <div className="flex flex-wrap items-end justify-between gap-4 border-b border-border pb-8">
+      <Reveal className="py-14 sm:py-20">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-end justify-between gap-4 px-5 sm:px-8">
           <h2 className="font-serif max-w-xl text-3xl font-semibold text-foreground sm:text-4xl">
             Четыре линии мужской классики
           </h2>
@@ -52,32 +53,40 @@ export function Products() {
             Фото — иллюстративные, готовятся собственные съёмки изделий.
           </p>
         </div>
+      </Reveal>
 
-        <div className="grid grid-cols-2 gap-x-6 gap-y-10 pt-10 lg:grid-cols-4">
-          {products.map(({ slug, index, image, alt, title, description }) => (
-            <Link key={slug} href={`/${slug}`} className="group">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-background-panel">
-                <Image
-                  src={image}
-                  alt={alt}
-                  fill
-                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <span className="mt-4 block text-xs font-semibold text-muted">
-                {index}
-              </span>
-              <h3 className="font-display mt-1 text-xl font-bold text-foreground">
-                {title}
+      {products.map((p, i) => (
+        <Reveal key={p.slug}>
+          <Link
+            href={`/${p.slug}`}
+            className={`group grid border-t border-border md:grid-cols-2 ${i % 2 === 0 ? "bg-background" : "bg-background-panel"}`}
+          >
+            <div
+              className={`relative aspect-[4/3] overflow-hidden md:aspect-auto ${i % 2 === 1 ? "md:order-2" : ""}`}
+            >
+              <Image
+                src={p.image}
+                alt={p.alt}
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+            <div className="flex flex-col justify-center px-5 py-14 sm:px-8 sm:py-20 md:px-16">
+              <span className="eyebrow text-accent">{p.index}</span>
+              <h3 className="font-serif mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
+                {p.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {description}
+              <p className="mt-4 max-w-md text-base leading-relaxed text-muted">
+                {p.description}
               </p>
-            </Link>
-          ))}
-        </div>
-      </div>
+              <span className="mt-6 inline-flex items-center text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4">
+                Подробнее →
+              </span>
+            </div>
+          </Link>
+        </Reveal>
+      ))}
     </section>
   );
 }

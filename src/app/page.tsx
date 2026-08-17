@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { ClientLogos } from "@/components/ClientLogos";
+import { TrustStatement } from "@/components/TrustStatement";
 import { About } from "@/components/About";
 import { Products } from "@/components/Products";
 import { Wholesale } from "@/components/Wholesale";
@@ -20,6 +21,7 @@ export default function Home() {
       <main>
         <Hero />
         <ClientLogos />
+        <TrustStatement />
         <About />
         <Products />
         <Wholesale />

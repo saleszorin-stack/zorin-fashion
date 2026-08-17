@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { site } from "@/lib/site";
+import { Reveal } from "@/components/Reveal";
 
 export function About() {
   return (
     <section id="about" className="border-b border-border">
-      <div className="grid md:grid-cols-2">
+      <Reveal className="grid md:grid-cols-2">
         <div className="relative h-72 md:h-auto">
           <Image
             src="/images/about.jpg"
@@ -43,7 +44,7 @@ export function About() {
             </p>
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
