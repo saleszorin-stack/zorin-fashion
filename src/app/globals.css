@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f6f4ef;
+  --background: #f4f6f8;
   --background-panel: #ffffff;
-  --foreground: #16140f;
-  --muted: #6d675a;
-  --accent: #a8462c;
-  --accent-soft: rgba(168, 70, 44, 0.08);
-  --border: rgba(22, 20, 15, 0.12);
-  --invert-background: #16140f;
-  --invert-foreground: #f6f4ef;
+  --foreground: #151a21;
+  --muted: #5b6672;
+  --accent: #2c5a86;
+  --accent-soft: rgba(44, 90, 134, 0.08);
+  --border: rgba(21, 26, 33, 0.12);
+  --invert-background: #151a21;
+  --invert-foreground: #f4f6f8;
 }
 
 @theme inline {
@@ -43,6 +43,13 @@ body {
 
 .font-serif {
   font-family: var(--font-serif), serif;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
 }
 
 .text-balance {

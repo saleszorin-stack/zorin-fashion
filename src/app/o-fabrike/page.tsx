@@ -45,10 +45,10 @@ export default function OFabrikePage() {
         </div>
 
         <div className="flex flex-col justify-center bg-accent-soft px-5 py-14 sm:px-8 sm:py-20 md:px-14">
-          <p className="text-xs uppercase tracking-[0.35em] text-accent">
+          <p className="eyebrow text-accent">
             О фабрике
           </p>
-          <h1 className="font-serif mt-4 max-w-md text-3xl font-semibold text-foreground sm:text-4xl">
+          <h1 className="font-serif mt-4 max-w-md text-4xl font-semibold text-foreground sm:text-5xl">
             Швейная фабрика в Бишкеке с {site.stats.foundedYear} года
           </h1>
         </div>
@@ -82,7 +82,7 @@ export default function OFabrikePage() {
             </p>
           </div>
 
-          <h2 className="font-serif mt-14 text-2xl font-semibold text-foreground">
+          <h2 className="font-serif mt-14 text-3xl font-semibold text-foreground sm:text-4xl">
             Оборудование и системы
           </h2>
           <dl className="mt-6 divide-y divide-border border-t border-border">
@@ -101,7 +101,7 @@ export default function OFabrikePage() {
             ))}
           </dl>
 
-          <h2 className="font-serif mt-14 text-2xl font-semibold text-foreground">
+          <h2 className="font-serif mt-14 text-3xl font-semibold text-foreground sm:text-4xl">
             Производство в кадре
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted">
@@ -120,11 +120,12 @@ export default function OFabrikePage() {
             <ContentPlaceholder
               label="Видео-экскурсия по производству"
               note="Короткое видео цеха и линии — добавим, когда будет готово"
+              aspect="aspect-video"
               className="sm:col-span-2"
             />
           </div>
 
-          <h2 className="font-serif mt-14 text-2xl font-semibold text-foreground">
+          <h2 className="font-serif mt-14 text-3xl font-semibold text-foreground sm:text-4xl">
             Репутация
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted">
@@ -135,71 +136,18 @@ export default function OFabrikePage() {
             зарегистрированная в России, — заказчики без своего бренда
             могут выпускать продукцию под ней.
           </p>
-          <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div className="mt-6 flex flex-wrap items-center gap-x-10 gap-y-4">
             {clients.map((c) => (
-              <ContentPlaceholder
+              <span
                 key={c}
-                label={c}
-                note="Логотип в качестве — по получении от клиента"
-              />
+                className="font-display text-sm font-semibold tracking-wide text-foreground/50"
+              >
+                {c}
+              </span>
             ))}
           </div>
 
-          <h2 className="font-serif mt-14 text-2xl font-semibold text-foreground">
-            Кейсы с цифрами
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted">
-            Партии, сроки и результаты по конкретным заказчикам — появятся
-            здесь после согласования с клиентами.
-          </p>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            <ContentPlaceholder
-              label="Кейс"
-              note="Объём партии, срок производства, результат — по согласованию"
-            />
-            <ContentPlaceholder
-              label="Кейс"
-              note="Объём партии, срок производства, результат — по согласованию"
-            />
-          </div>
-
-          <h2 className="font-serif mt-14 text-2xl font-semibold text-foreground">
-            Отзывы
-          </h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
-            <ContentPlaceholder
-              label="Отзыв клиента"
-              note="Текст и должность — по согласованию с заказчиком"
-            />
-            <ContentPlaceholder
-              label="Отзыв клиента"
-              note="Текст и должность — по согласованию с заказчиком"
-            />
-            <ContentPlaceholder
-              label="Отзыв клиента"
-              note="Текст и должность — по согласованию с заказчиком"
-            />
-          </div>
-
-          <h2 className="font-serif mt-14 text-2xl font-semibold text-foreground">
-            Награды и сертификаты
-          </h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
-            <ContentPlaceholder
-              label="Сертификат"
-              note="Скан — как только предоставит фабрика"
-            />
-            <ContentPlaceholder
-              label="Награда"
-              note="Скан — как только предоставит фабрика"
-            />
-            <ContentPlaceholder
-              label="Сертификат / награда"
-              note="Скан — как только предоставит фабрика"
-            />
-          </div>
-
-          <div className="mt-14 flex flex-wrap items-center gap-4">
+          <div className="mt-14 flex flex-wrap items-center gap-x-6 gap-y-3">
             <a
               href={`tel:${site.phones[0].raw}`}
               className="inline-flex items-center rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-opacity hover:opacity-85"
@@ -208,15 +156,15 @@ export default function OFabrikePage() {
             </a>
             <Link
               href="/produktsiya"
-              className="inline-flex items-center rounded-full border border-foreground/25 px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-foreground"
+              className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70"
             >
-              Смотреть продукцию
+              Смотреть продукцию →
             </Link>
             <Link
               href="/opt"
-              className="inline-flex items-center rounded-full border border-foreground/25 px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-foreground"
+              className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70"
             >
-              Условия опта
+              Условия опта →
             </Link>
           </div>
         </div>

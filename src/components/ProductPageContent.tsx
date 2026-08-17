@@ -61,25 +61,22 @@ export function ProductPageContent({ product }: { product: ProductDetail }) {
             ))}
           </div>
 
-          <dl className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-3">
+          <dl className="mt-10 grid grid-cols-1 gap-px overflow-hidden border-y border-border bg-border sm:grid-cols-3">
             {product.specs.map((s) => (
               <div key={s.label} className="bg-background-panel p-5">
                 <dt className="text-xs uppercase tracking-wide text-muted">
                   {s.label}
                 </dt>
-                <dd className="font-display mt-1 text-base font-bold text-foreground">
+                <dd className="font-serif mt-1 text-base font-bold text-foreground">
                   {s.value}
                 </dd>
               </div>
             ))}
           </dl>
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+          <div className="mt-10 grid gap-8 border-t border-border pt-8 sm:grid-cols-2">
             {product.features.map((f) => (
-              <div
-                key={f.title}
-                className="rounded-2xl border border-border bg-background-panel p-6"
-              >
+              <div key={f.title}>
                 <h2 className="font-display text-lg font-bold text-foreground">
                   {f.title}
                 </h2>
@@ -90,7 +87,7 @@ export function ProductPageContent({ product }: { product: ProductDetail }) {
             ))}
           </div>
 
-          <div className="mt-12 rounded-2xl border border-border bg-accent-soft p-6 sm:p-8">
+          <div className="mt-12 bg-accent-soft p-6 sm:p-8">
             <h2 className="font-display text-lg font-bold text-foreground">
               Для кого
             </h2>
@@ -99,7 +96,7 @@ export function ProductPageContent({ product }: { product: ProductDetail }) {
             </p>
           </div>
 
-          <div className="mt-12 flex flex-wrap items-center gap-4">
+          <div className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-3">
             <a
               href={`tel:${primaryPhone.raw}`}
               className="inline-flex items-center rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-opacity hover:opacity-85"
@@ -108,15 +105,15 @@ export function ProductPageContent({ product }: { product: ProductDetail }) {
             </a>
             <Link
               href="/opt"
-              className="inline-flex items-center rounded-full border border-foreground/25 px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-foreground"
+              className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70"
             >
-              Как устроен опт
+              Как устроен опт →
             </Link>
             <Link
               href="/blog/proizvodstvo-odezhdy-v-kyrgyzstane-dlya-rossii"
-              className="inline-flex items-center rounded-full border border-foreground/25 px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-foreground"
+              className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70"
             >
-              Для брендов из России
+              Для брендов из России →
             </Link>
           </div>
         </div>
@@ -124,7 +121,7 @@ export function ProductPageContent({ product }: { product: ProductDetail }) {
 
       <section className="border-b border-border bg-background-panel">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
-          <h2 className="font-serif text-2xl font-semibold text-foreground">
+          <h2 className="font-serif text-3xl font-semibold text-foreground sm:text-4xl">
             Другие линии продукции
           </h2>
           <div className="mt-6 grid gap-5 sm:grid-cols-3">

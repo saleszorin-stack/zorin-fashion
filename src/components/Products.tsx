@@ -45,7 +45,7 @@ export function Products() {
     <section id="products" className="border-b border-border">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
         <div className="flex flex-wrap items-end justify-between gap-4 border-b border-border pb-8">
-          <h2 className="font-serif max-w-xl text-4xl font-semibold text-foreground sm:text-5xl">
+          <h2 className="font-serif max-w-xl text-3xl font-semibold text-foreground sm:text-4xl">
             Четыре линии мужской классики
           </h2>
           <p className="max-w-xs text-sm text-muted">
@@ -53,7 +53,7 @@ export function Products() {
           </p>
         </div>
 
-        <div className="grid gap-x-6 gap-y-10 pt-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 pt-10 lg:grid-cols-4">
           {products.map(({ slug, index, image, alt, title, description }) => (
             <Link key={slug} href={`/${slug}`} className="group">
               <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-background-panel">

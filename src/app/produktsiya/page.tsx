@@ -23,7 +23,7 @@ export default function ProduktsiyaPage() {
 
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
-          <p className="text-xs uppercase tracking-[0.35em] text-accent">
+          <p className="eyebrow text-accent">
             Продукция
           </p>
           <h1 className="font-serif mt-4 max-w-2xl text-4xl font-semibold text-foreground sm:text-5xl">
@@ -39,14 +39,15 @@ export default function ProduktsiyaPage() {
 
       <section>
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {products.map((p) => (
+          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+            {products.map((p, i) => (
               <Link key={p.slug} href={`/${p.slug}`} className="group">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-background-panel">
                   <Image
                     src={p.heroImage}
                     alt={p.heroAlt}
                     fill
+                    priority={i === 0}
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
@@ -54,6 +55,9 @@ export default function ProduktsiyaPage() {
                 <h2 className="font-display mt-4 text-xl font-bold text-foreground">
                   {p.nav}
                 </h2>
+                <p className="eyebrow mt-1.5 text-accent">
+                  {p.specs[0].value} · {p.specs[1].value}
+                </p>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
                   {p.intro[0]}
                 </p>

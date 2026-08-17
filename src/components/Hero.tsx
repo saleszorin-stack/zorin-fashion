@@ -21,17 +21,18 @@ export function Hero() {
 
         <div className="relative mx-auto flex h-full max-w-6xl items-center px-5 sm:px-8">
           <div className="max-w-xl border-l-2 border-white/40 pl-6 sm:pl-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
+            <p className="eyebrow text-white/70">
               Швейная фабрика · Бишкек · с {site.stats.foundedYear} года
             </p>
 
             <h1 className="font-serif text-balance mt-5 text-5xl font-semibold leading-[1.05] text-white sm:text-6xl md:text-7xl">
-              Мужская
+              Контрактный пошив
               <br />
-              классика.
-              <br />
-              <span className="italic text-white/85">Сшито в Кыргызстане.</span>
+              мужской классики.
             </h1>
+            <p className="mt-4 text-lg font-medium text-white/70 sm:text-xl">
+              Мужская классика, сшитая в Кыргызстане — под вашим брендом.
+            </p>
           </div>
         </div>
       </div>

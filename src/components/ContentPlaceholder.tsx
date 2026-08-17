@@ -1,15 +1,17 @@
 export function ContentPlaceholder({
   label,
   note,
+  aspect = "aspect-[4/3]",
   className = "",
 }: {
   label: string;
   note: string;
+  aspect?: string;
   className?: string;
 }) {
   return (
     <div
-      className={`flex min-h-[140px] flex-col items-center justify-center gap-2 rounded-2xl border border-dashed border-foreground/25 bg-background-panel p-6 text-center ${className}`}
+      className={`relative flex ${aspect} flex-col items-center justify-center gap-2 rounded-xl bg-foreground/[0.04] p-6 text-center ${className}`}
     >
       <span className="font-display text-sm font-bold text-foreground/60">
         {label}

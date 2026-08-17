@@ -33,7 +33,7 @@ export default function BlogIndexPage() {
 
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
-          <p className="text-xs uppercase tracking-[0.35em] text-accent">
+          <p className="eyebrow text-accent">
             Блог
           </p>
           <h1 className="font-serif mt-4 max-w-2xl text-4xl font-semibold text-foreground sm:text-5xl">

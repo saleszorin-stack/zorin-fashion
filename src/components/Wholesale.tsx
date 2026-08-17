@@ -37,7 +37,7 @@ export function Wholesale() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
         <div className="relative mx-auto w-full max-w-6xl px-5 pb-10 sm:px-8 sm:pb-14">
-          <p className="text-xs uppercase tracking-[0.35em] text-white/70">
+          <p className="eyebrow text-white/70">
             Оптовым партнёрам
           </p>
           <h2 className="font-serif mt-3 max-w-2xl text-3xl font-semibold text-white sm:text-5xl">
@@ -54,12 +54,9 @@ export function Wholesale() {
           500 единиц на модель.
         </p>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 lg:grid-cols-4">
           {advantages.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-2xl border border-border bg-background-panel p-6"
-            >
+            <div key={item.title} className="border-t border-border pt-5">
               <h3 className="font-display text-lg font-bold text-foreground">
                 {item.title}
               </h3>
@@ -70,7 +67,7 @@ export function Wholesale() {
           ))}
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center gap-4">
+        <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
           <Link
             href="/opt"
             className="inline-flex items-center rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-opacity hover:opacity-85"
@@ -79,9 +76,9 @@ export function Wholesale() {
           </Link>
           <Link
             href="/blog/proizvodstvo-odezhdy-v-kyrgyzstane-dlya-rossii"
-            className="inline-flex items-center rounded-full border border-foreground/25 px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-foreground"
+            className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70"
           >
-            Для брендов из России
+            Для брендов из России →
           </Link>
         </div>
       </div>

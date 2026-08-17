@@ -16,7 +16,7 @@ export function About() {
         </div>
 
         <div className="flex flex-col justify-center bg-accent-soft px-5 py-14 sm:px-8 sm:py-20 md:px-14">
-          <p className="text-xs uppercase tracking-[0.35em] text-accent">
+          <p className="eyebrow text-accent">
             О фабрике
           </p>
           <h2 className="font-serif mt-4 max-w-md text-3xl font-semibold text-foreground sm:text-4xl">

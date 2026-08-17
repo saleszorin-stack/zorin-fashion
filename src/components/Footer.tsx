@@ -16,7 +16,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-invert-foreground/40">
+            <p className="eyebrow text-invert-foreground/40">
               Продукция
             </p>
             <ul className="mt-3 space-y-2 text-sm">
@@ -34,7 +34,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-invert-foreground/40">
+            <p className="eyebrow text-invert-foreground/40">
               Компания
             </p>
             <ul className="mt-3 space-y-2 text-sm">

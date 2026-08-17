@@ -119,7 +119,7 @@ export default function OptPage() {
       <section className="border-b border-border">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 sm:py-20 md:grid-cols-[1.2fr_0.8fr] md:items-center">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-accent">
+            <p className="eyebrow text-accent">
               Опт
             </p>
             <h1 className="font-serif mt-4 text-4xl font-semibold leading-[1.08] text-foreground sm:text-5xl">
@@ -155,7 +155,7 @@ export default function OptPage() {
 
       <section className="border-b border-border bg-background-panel">
         <div className="mx-auto max-w-6xl px-5 py-10 sm:px-8">
-          <p className="text-xs uppercase tracking-[0.3em] text-accent">
+          <p className="eyebrow text-accent">
             Профиль заказчика
           </p>
           <div className="mt-4 grid gap-6 sm:grid-cols-3">
@@ -176,7 +176,7 @@ export default function OptPage() {
 
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
-          <h2 className="font-serif text-3xl font-semibold text-foreground">
+          <h2 className="font-serif text-3xl font-semibold text-foreground sm:text-4xl">
             Как проходит заказ
           </h2>
           <div className="mt-8 grid gap-x-8 gap-y-8 sm:grid-cols-2">
@@ -206,7 +206,7 @@ export default function OptPage() {
 
       <section className="border-b border-border bg-background-panel">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
-          <h2 className="font-serif text-3xl font-semibold text-foreground">
+          <h2 className="font-serif text-3xl font-semibold text-foreground sm:text-4xl">
             Коммерческие условия
           </h2>
           <dl className="mt-8 divide-y divide-border border-t border-border">
@@ -231,7 +231,7 @@ export default function OptPage() {
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
           <div className="grid gap-10 sm:grid-cols-2">
             <div>
-              <h2 className="font-serif text-2xl font-semibold text-foreground">
+              <h2 className="font-serif text-3xl font-semibold text-foreground sm:text-4xl">
                 Что входит в работу
               </h2>
               <ul className="mt-5 space-y-2.5 text-sm leading-relaxed text-muted">
@@ -244,7 +244,7 @@ export default function OptPage() {
               </ul>
             </div>
             <div>
-              <h2 className="font-serif text-2xl font-semibold text-foreground">
+              <h2 className="font-serif text-3xl font-semibold text-foreground sm:text-4xl">
                 Чего мы не делаем
               </h2>
               <p className="mt-1 text-xs text-muted">
@@ -270,9 +270,9 @@ export default function OptPage() {
             </a>
             <Link
               href="/produktsiya"
-              className="inline-flex items-center rounded-full border border-foreground/25 px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-foreground"
+              className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70"
             >
-              Смотреть продукцию
+              Смотреть продукцию →
             </Link>
           </div>
         </div>

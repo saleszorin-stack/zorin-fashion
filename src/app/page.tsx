@@ -23,7 +23,7 @@ export default function Home() {
         <About />
         <Products />
         <Wholesale />
-        <Faq />
+        <Faq limit={6} moreHref="/opt#faq" />
         <Contacts />
       </main>
     </>

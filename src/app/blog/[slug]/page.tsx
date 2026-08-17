@@ -88,13 +88,15 @@ export default async function ArticlePage({
           >
             {formatDate(article.date)}
           </time>
-          <h1 className="font-serif mt-3 text-3xl font-semibold leading-[1.15] text-foreground sm:text-4xl">
+          <h1 className="font-serif mt-3 text-4xl font-semibold leading-[1.1] text-foreground sm:text-5xl">
             {article.title}
           </h1>
 
           <div className="mt-10 space-y-5 text-base leading-relaxed text-muted">
             {(() => {
-              let firstParagraphSeen = false;
+              const firstParagraphIndex = article.body.findIndex(
+                (b) => b.type !== "h2" && b.type !== "list" && b.type !== "quote",
+              );
               return article.body.map((block, i) => {
                 if (block.type === "h2") {
                   return (
@@ -125,10 +127,8 @@ export default async function ArticlePage({
                     </blockquote>
                   );
                 }
-                const isFirstParagraph = !firstParagraphSeen;
-                firstParagraphSeen = true;
                 return (
-                  <p key={i} className={isFirstParagraph ? "drop-cap" : undefined}>
+                  <p key={i} className={i === firstParagraphIndex ? "drop-cap" : undefined}>
                     {block.text}
                   </p>
                 );
@@ -137,12 +137,12 @@ export default async function ArticlePage({
           </div>
 
           {article.relatedLinks.length > 0 && (
-            <div className="mt-14 flex flex-wrap items-center gap-4 border-t border-border pt-10">
+            <div className="mt-14 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border pt-10">
               {article.relatedLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="inline-flex items-center rounded-full border border-foreground/25 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-foreground"
+                  className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70"
                 >
                   {link.label} →
                 </Link>

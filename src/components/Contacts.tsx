@@ -7,7 +7,7 @@ export function Contacts() {
       className="bg-invert-background text-invert-foreground"
     >
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
-        <h2 className="font-serif max-w-2xl text-4xl font-semibold sm:text-5xl">
+        <h2 className="font-serif max-w-2xl text-3xl font-semibold sm:text-4xl">
           Свяжитесь с производством
         </h2>
         <p className="mt-4 max-w-lg text-invert-foreground/60">
@@ -17,7 +17,7 @@ export function Contacts() {
 
         <div className="mt-14 grid gap-10 border-t border-invert-foreground/15 pt-10 sm:grid-cols-3">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-invert-foreground/50">
+            <p className="eyebrow text-invert-foreground/50">
               Телефон
             </p>
             <div className="mt-4 flex flex-col gap-2">
@@ -34,7 +34,7 @@ export function Contacts() {
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-invert-foreground/50">
+            <p className="eyebrow text-invert-foreground/50">
               Мессенджеры
             </p>
             <div className="mt-4 flex flex-col gap-2">
@@ -58,7 +58,7 @@ export function Contacts() {
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-invert-foreground/50">
+            <p className="eyebrow text-invert-foreground/50">
               Адрес
             </p>
             <p className="mt-4 max-w-xs text-lg leading-snug text-invert-foreground/85">

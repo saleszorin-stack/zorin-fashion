@@ -15,7 +15,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 sm:px-8">
         <Link href="/" className="flex items-center gap-2.5 text-foreground">
           <Logo className="h-6 w-auto" />
-          <span className="hidden text-xs font-semibold uppercase tracking-[0.2em] text-muted sm:inline">
+          <span className="eyebrow hidden text-muted sm:inline">
             Fashion
           </span>
         </Link>
