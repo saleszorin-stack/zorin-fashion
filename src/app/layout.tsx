@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { HeaderSpacer } from "@/components/HeaderSpacer";
 import { Footer } from "@/components/Footer";
 import { site } from "@/lib/site";
 
@@ -107,6 +108,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           }}
         />
         <Header />
+        <HeaderSpacer />
         <div className="flex-1">{children}</div>
         <Footer />
       </body>
