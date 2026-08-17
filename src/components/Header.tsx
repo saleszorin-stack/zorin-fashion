@@ -8,7 +8,7 @@ import { navLinks, productLines, transparentHeaderPaths } from "@/lib/nav";
 import { Logo } from "@/components/Logo";
 
 const navClass =
-  "text-[15px] font-semibold tracking-tight text-invert-foreground/70 transition-colors hover:text-invert-foreground";
+  "text-[15px] font-semibold tracking-tight text-foreground/70 transition-colors hover:text-foreground";
 
 export function Header() {
   const pathname = usePathname();
@@ -32,11 +32,11 @@ export function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        transparent ? "bg-transparent" : "bg-invert-background"
+        transparent ? "bg-transparent" : "bg-background/95 backdrop-blur border-b border-border"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-5 sm:px-8">
-        <Link href="/" className="text-invert-foreground">
+        <Link href="/" className="text-foreground">
           <Logo className="h-6 w-auto" />
         </Link>
 
@@ -71,7 +71,7 @@ export function Header() {
 
         <a
           href={`tel:${primaryPhone.raw}`}
-          className="hidden items-center rounded-full bg-invert-foreground px-5 py-2.5 text-sm font-semibold text-invert-background transition-opacity hover:opacity-85 lg:flex"
+          className="hidden items-center rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition-opacity hover:opacity-85 lg:flex"
         >
           {primaryPhone.label}
         </a>
@@ -84,24 +84,24 @@ export function Header() {
           className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 lg:hidden"
         >
           <span
-            className={`h-0.5 w-6 bg-invert-foreground transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}
+            className={`h-0.5 w-6 bg-foreground transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}
           />
           <span
-            className={`h-0.5 w-6 bg-invert-foreground transition-opacity ${open ? "opacity-0" : ""}`}
+            className={`h-0.5 w-6 bg-foreground transition-opacity ${open ? "opacity-0" : ""}`}
           />
           <span
-            className={`h-0.5 w-6 bg-invert-foreground transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`}
+            className={`h-0.5 w-6 bg-foreground transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`}
           />
         </button>
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-1 bg-invert-background px-5 py-4 lg:hidden">
+        <nav className="flex flex-col gap-1 border-t border-border bg-background px-5 py-4 lg:hidden">
           <button
             type="button"
             onClick={() => setProductsOpen((v) => !v)}
             aria-expanded={productsOpen}
-            className="flex items-center justify-between rounded-md px-2 py-2.5 text-sm text-invert-foreground/70 hover:text-invert-foreground"
+            className="flex items-center justify-between rounded-md px-2 py-2.5 text-sm text-muted hover:text-foreground"
           >
             {productsLink.label}
             <span className={`text-[10px] transition-transform ${productsOpen ? "-rotate-180" : ""}`}>
@@ -115,7 +115,7 @@ export function Header() {
                   key={p.slug}
                   href={`/${p.slug}`}
                   onClick={() => setOpen(false)}
-                  className="rounded-md px-2 py-2 text-sm text-invert-foreground/70 hover:text-invert-foreground"
+                  className="rounded-md px-2 py-2 text-sm text-muted hover:text-foreground"
                 >
                   {p.nav}
                 </Link>
@@ -127,14 +127,14 @@ export function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="rounded-md px-2 py-2.5 text-sm text-invert-foreground/70 hover:text-invert-foreground"
+              className="rounded-md px-2 py-2.5 text-sm text-muted hover:text-foreground"
             >
               {link.label}
             </Link>
           ))}
           <a
             href={`tel:${primaryPhone.raw}`}
-            className="mt-2 rounded-full bg-invert-foreground px-2 py-2.5 text-center text-sm font-semibold text-invert-background"
+            className="mt-2 rounded-full bg-foreground px-2 py-2.5 text-center text-sm font-semibold text-background"
           >
             {primaryPhone.label}
           </a>

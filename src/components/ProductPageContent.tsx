@@ -61,7 +61,8 @@ export function ProductPageContent({ product }: { product: ProductDetail }) {
             ))}
           </div>
 
-          <dl className="mt-10 grid grid-cols-1 gap-px overflow-hidden border-y border-border bg-border sm:grid-cols-3">
+          <p className="eyebrow mt-14 text-accent">Условия заказа</p>
+          <dl className="mt-4 grid grid-cols-1 gap-px overflow-hidden border-y border-border bg-border sm:grid-cols-3">
             {product.specs.map((s) => (
               <div key={s.label} className="bg-background-panel p-5">
                 <dt className="text-xs uppercase tracking-wide text-muted">
@@ -74,7 +75,8 @@ export function ProductPageContent({ product }: { product: ProductDetail }) {
             ))}
           </dl>
 
-          <div className="mt-10 grid gap-8 border-t border-border pt-8 sm:grid-cols-2">
+          <p className="eyebrow mt-14 text-accent">Особенности</p>
+          <div className="mt-4 grid gap-8 bg-background-panel p-6 sm:grid-cols-2 sm:p-8">
             {product.features.map((f) => (
               <div key={f.title}>
                 <h2 className="font-display text-lg font-bold text-foreground">
@@ -87,16 +89,14 @@ export function ProductPageContent({ product }: { product: ProductDetail }) {
             ))}
           </div>
 
-          <div className="mt-12 bg-accent-soft p-6 sm:p-8">
-            <h2 className="font-display text-lg font-bold text-foreground">
-              Для кого
-            </h2>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
+          <p className="eyebrow mt-14 text-accent">Для кого</p>
+          <div className="mt-4 bg-accent-soft p-6 sm:p-8">
+            <p className="max-w-2xl text-sm leading-relaxed text-muted">
               {product.forWhom}
             </p>
           </div>
 
-          <div className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-3">
+          <div className="mt-14 flex flex-wrap items-center gap-x-6 gap-y-3">
             <a
               href={`tel:${primaryPhone.raw}`}
               className="inline-flex items-center rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-opacity hover:opacity-85"
