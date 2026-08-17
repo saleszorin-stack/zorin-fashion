@@ -64,8 +64,8 @@ export function Hero() {
         {[
           { value: String(site.stats.foundedYear), label: `На рынке ${age} лет` },
           { value: String(site.stats.employees), label: "Сотрудников" },
-          { value: `${site.stats.areaSqm.toLocaleString("ru-RU")} м²`, label: "Производственная площадь" },
-          { value: `${(site.stats.annualOutput / 1000).toFixed(0)} тыс.`, label: "Комплектов в год" },
+          { value: site.stats.areaSqm.toLocaleString("ru-RU"), label: "м² производственной площади" },
+          { value: (site.stats.annualOutput / 1000).toFixed(0), label: "тыс. комплектов в год" },
         ].map((stat) => (
           <div key={stat.label} className="flex flex-col gap-1">
             <dt className="sr-only">{stat.label}</dt>
