@@ -12,7 +12,7 @@ export function Contacts() {
         </h2>
         <p className="mt-4 max-w-lg text-invert-foreground/60">
           Оптовые заказы и сотрудничество — {site.contactPerson}. Звоните
-          или пишите в WhatsApp/Telegram напрямую.
+          или пишите в WhatsApp/Telegram/MAX напрямую.
         </p>
 
         <div className="mt-14 grid gap-10 border-t border-invert-foreground/15 pt-10 sm:grid-cols-3">
@@ -54,6 +54,9 @@ export function Contacts() {
               >
                 Telegram
               </a>
+              <span className="font-display text-xl font-bold sm:text-2xl">
+                MAX
+              </span>
             </div>
           </div>
 

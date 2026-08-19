@@ -30,6 +30,14 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/korporativnaya-odezhda"
+                  className="hover:text-invert-foreground"
+                >
+                  Корпоративная одежда
+                </Link>
+              </li>
             </ul>
           </div>
 

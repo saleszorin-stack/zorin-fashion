@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Playfair_Display } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { HeaderSpacer } from "@/components/HeaderSpacer";
@@ -10,13 +10,6 @@ const manrope = Manrope({
   variable: "--font-body",
   subsets: ["latin", "cyrillic"],
   weight: ["400", "500", "600", "700", "800"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-serif",
-  subsets: ["latin", "cyrillic"],
-  style: ["normal", "italic"],
-  weight: ["500", "600", "700", "800", "900"],
 });
 
 const title = "ZORIN — швейная фабрика мужской классики в Бишкеке";
@@ -98,7 +91,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="ru"
-      className={`${manrope.variable} ${playfair.variable} h-full antialiased`}
+      className={`${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground font-body">
         <script

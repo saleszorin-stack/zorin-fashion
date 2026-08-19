@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ContentPlaceholder } from "@/components/ContentPlaceholder";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -104,25 +103,25 @@ export default function OFabrikePage() {
           <h2 className="font-serif mt-14 text-3xl font-semibold text-foreground sm:text-4xl">
             Производство в кадре
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted">
-            Реальные фото цеха и видео-экскурсия по производству появятся
-            здесь после съёмки на площадке в Новопавловке.
-          </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            <ContentPlaceholder
-              label="Фото цеха"
-              note="Раскройный и швейный участки — добавим после фотосъёмки"
-            />
-            <ContentPlaceholder
-              label="Фото готовой продукции"
-              note="Изделия на выходе с ОТК — добавим после фотосъёмки"
-            />
-            <ContentPlaceholder
-              label="Видео-экскурсия по производству"
-              note="Короткое видео цеха и линии — добавим, когда будет готово"
-              aspect="aspect-video"
-              className="sm:col-span-2"
-            />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+              <Image
+                src="/images/workshop.jpg"
+                alt="Швейный цех, раскройный и швейный участки"
+                fill
+                sizes="(min-width: 640px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+              <Image
+                src="/images/finished-goods.jpg"
+                alt="Готовые изделия на выходе с ОТК"
+                fill
+                sizes="(min-width: 640px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
 
           <h2 className="font-serif mt-14 text-3xl font-semibold text-foreground sm:text-4xl">

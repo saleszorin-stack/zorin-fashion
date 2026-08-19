@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: site.url, lastModified: now, changeFrequency: "monthly", priority: 1 },
     { url: `${site.url}/produktsiya`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${site.url}/opt`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${site.url}/korporativnaya-odezhda`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${site.url}/o-fabrike`, lastModified: now, changeFrequency: "yearly", priority: 0.6 },
     { url: `${site.url}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
   ];

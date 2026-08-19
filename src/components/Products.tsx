@@ -45,13 +45,10 @@ export function Products() {
   return (
     <section id="products" className="border-b border-border">
       <Reveal className="py-14 sm:py-20">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-end justify-between gap-4 px-5 sm:px-8">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <h2 className="font-serif max-w-xl text-3xl font-semibold text-foreground sm:text-4xl">
             Четыре линии мужской классики
           </h2>
-          <p className="max-w-xs text-sm text-muted">
-            Фото — иллюстративные, готовятся собственные съёмки изделий.
-          </p>
         </div>
       </Reveal>
 
