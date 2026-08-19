@@ -27,7 +27,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
       />
       <ol className="mx-auto flex max-w-6xl flex-wrap items-center gap-1.5 px-5 py-4 text-xs text-muted sm:px-8">
         <li>
-          <Link href="/" className="hover:text-foreground">
+          <Link href="/" className="rounded-sm hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
             Главная
           </Link>
         </li>
@@ -35,7 +35,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
           <li key={i} className="flex items-center gap-1.5">
             <span aria-hidden="true">/</span>
             {item.href ? (
-              <Link href={item.href} className="hover:text-foreground">
+              <Link href={item.href} className="rounded-sm hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
                 {item.label}
               </Link>
             ) : (

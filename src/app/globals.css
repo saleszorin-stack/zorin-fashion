@@ -10,6 +10,17 @@
   --border: rgba(242, 244, 246, 0.12);
   --invert-background: #f2f4f6;
   --invert-foreground: #12161c;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 @theme inline {

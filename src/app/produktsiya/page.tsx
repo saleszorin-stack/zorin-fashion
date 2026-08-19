@@ -41,7 +41,11 @@ export default function ProduktsiyaPage() {
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
             {products.map((p, i) => (
-              <Link key={p.slug} href={`/${p.slug}`} className="group">
+              <Link
+                key={p.slug}
+                href={`/${p.slug}`}
+                className="group rounded-sm transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:opacity-90"
+              >
                 <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-background-panel">
                   <Image
                     src={p.heroImage}

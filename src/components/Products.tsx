@@ -56,7 +56,7 @@ export function Products() {
         <Reveal key={p.slug}>
           <Link
             href={`/${p.slug}`}
-            className={`group grid border-t border-border md:grid-cols-2 ${i % 2 === 0 ? "bg-background" : "bg-background-panel"}`}
+            className={`group grid border-t border-border transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset active:opacity-90 md:grid-cols-2 ${i % 2 === 0 ? "bg-background" : "bg-background-panel"}`}
           >
             <div
               className={`relative aspect-[4/3] overflow-hidden md:aspect-auto ${i % 2 === 1 ? "md:order-2" : ""}`}

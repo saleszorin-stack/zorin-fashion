@@ -25,7 +25,7 @@ export function Contacts() {
                 <a
                   key={phone.raw}
                   href={`tel:${phone.raw}`}
-                  className="font-display text-xl font-bold transition-opacity hover:opacity-70 sm:text-2xl"
+                  className="font-display rounded-sm text-xl font-bold transition-opacity hover:opacity-70 active:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-invert-background sm:text-2xl"
                 >
                   {phone.label}
                 </a>
@@ -42,7 +42,7 @@ export function Contacts() {
                 href={site.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-display text-xl font-bold transition-opacity hover:opacity-70 sm:text-2xl"
+                className="font-display rounded-sm text-xl font-bold transition-opacity hover:opacity-70 active:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-invert-background sm:text-2xl"
               >
                 WhatsApp
               </a>
@@ -50,7 +50,7 @@ export function Contacts() {
                 href={site.telegram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-display text-xl font-bold transition-opacity hover:opacity-70 sm:text-2xl"
+                className="font-display rounded-sm text-xl font-bold transition-opacity hover:opacity-70 active:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-invert-background sm:text-2xl"
               >
                 Telegram
               </a>

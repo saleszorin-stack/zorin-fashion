@@ -49,7 +49,7 @@ export default function BlogIndexPage() {
               <Link
                 key={article.slug}
                 href={`/blog/${article.slug}`}
-                className="group"
+                className="group rounded-sm transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:opacity-90"
               >
                 <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-background-panel">
                   <Image

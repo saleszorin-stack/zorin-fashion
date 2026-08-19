@@ -24,7 +24,7 @@ export function Footer() {
                 <li key={p.slug}>
                   <Link
                     href={`/${p.slug}`}
-                    className="hover:text-invert-foreground"
+                    className="rounded-sm hover:text-invert-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-invert-background"
                   >
                     {p.nav}
                   </Link>
@@ -33,7 +33,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/korporativnaya-odezhda"
-                  className="hover:text-invert-foreground"
+                  className="rounded-sm hover:text-invert-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-invert-background"
                 >
                   Корпоративная одежда
                 </Link>
@@ -50,7 +50,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="hover:text-invert-foreground"
+                    className="rounded-sm hover:text-invert-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-invert-background"
                   >
                     {link.label}
                   </Link>
