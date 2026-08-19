@@ -132,9 +132,9 @@ export default function OptPage() {
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">
               ZORIN — производство полного цикла в Бишкеке с 1997 года.
-              Работаем с российскими брендами, оптовыми компаниями и
-              корпоративными заказчиками — подробности для брендов из
-              России в{" "}
+              Основные заказчики — бренды из России, оптовые компании и
+              предприятия с корпоративной формой; подробности для
+              брендов из России в{" "}
               <Link
                 href="/blog/proizvodstvo-odezhdy-v-kyrgyzstane-dlya-rossii"
                 className="rounded-sm text-accent underline decoration-2 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:opacity-70"
