@@ -28,10 +28,10 @@ export function Hero() {
             <h1 className="font-serif text-balance mt-5 text-5xl font-semibold leading-[1.05] text-white sm:text-6xl md:text-7xl">
               Контрактный пошив
               <br />
-              мужской классики.
+              мужской классики
             </h1>
             <p className="mt-4 text-lg font-medium text-white/70 sm:text-xl">
-              Мужская классика, сшитая в Кыргызстане — под вашим брендом.
+              Мужская классика, сшитая в Кыргызстане — под вашим брендом
             </p>
           </div>
         </div>
