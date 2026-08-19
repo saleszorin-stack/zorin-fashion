@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Faq } from "@/components/Faq";
 import { site } from "@/lib/site";
 import { faqItems } from "@/lib/faq";
+import { faqPageJsonLd, jsonLdScript } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Оптовый пошив мужской одежды в Кыргызстане",
@@ -114,6 +115,10 @@ export default function OptPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(faqPageJsonLd(faqItems)) }}
+      />
       <Breadcrumbs items={[{ label: "Опт" }]} />
 
       <section className="border-b border-border">

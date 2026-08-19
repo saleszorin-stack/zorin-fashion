@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { site } from "@/lib/site";
 import { productLines } from "@/lib/nav";
+import { jsonLdScript } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Пошив корпоративной формы и униформы оптом",
@@ -29,8 +30,25 @@ const industries = [
 export default function KorporativnayaOdezhdaPage() {
   const primaryPhone = site.phones[0];
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Пошив корпоративной формы и униформы",
+    provider: {
+      "@type": "LocalBusiness",
+      name: site.name,
+      url: site.url,
+    },
+    areaServed: ["Кыргызстан", "Россия", "Казахстан"],
+    description: metadata.description,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd) }}
+      />
       <Breadcrumbs items={[{ label: "Корпоративная одежда" }]} />
 
       <section className="grid md:grid-cols-2">
