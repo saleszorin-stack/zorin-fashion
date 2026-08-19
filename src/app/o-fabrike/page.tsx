@@ -22,6 +22,8 @@ const equipment = [
   { label: "Управление производством", value: "АСУП «Стилон»" },
   { label: "Швейное оборудование", value: "Juki, Brother, Jack, Pfaff, ASS" },
   { label: "Оборудование ВТО", value: "Прессы Indupress, Malkan" },
+  { label: "Мощность костюмно-пиджачной группы", value: "8 000 изделий в месяц" },
+  { label: "Мощность брючной группы", value: "10 000 изделий в месяц" },
 ];
 
 const clients = ["Сударь", "Stenser", "Magman", "Стрекоза"];
