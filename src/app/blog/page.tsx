@@ -45,7 +45,7 @@ export default function BlogIndexPage() {
       <section>
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
           <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2">
-            {sorted.map((article) => (
+            {sorted.map((article, i) => (
               <Link
                 key={article.slug}
                 href={`/blog/${article.slug}`}
@@ -56,6 +56,7 @@ export default function BlogIndexPage() {
                     src={article.image}
                     alt={article.imageAlt}
                     fill
+                    priority={i === 0}
                     sizes="(min-width: 640px) 50vw, 100vw"
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
