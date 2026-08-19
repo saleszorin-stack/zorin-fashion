@@ -54,9 +54,14 @@ export function Contacts() {
               >
                 Telegram
               </a>
-              <span className="font-display text-xl font-bold sm:text-2xl">
+              <a
+                href={site.max}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-display rounded-sm text-xl font-bold transition-opacity hover:opacity-70 active:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-invert-background sm:text-2xl"
+              >
                 MAX
-              </span>
+              </a>
             </div>
           </div>
 
