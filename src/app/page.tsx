@@ -5,7 +5,6 @@ import { About } from "@/components/About";
 import { Products } from "@/components/Products";
 import { Wholesale } from "@/components/Wholesale";
 import { Faq } from "@/components/Faq";
-import { Contacts } from "@/components/Contacts";
 import { faqItems } from "@/lib/faq";
 import { faqPageJsonLd, jsonLdScript } from "@/lib/seo";
 
@@ -26,7 +25,6 @@ export default function Home() {
         <Products />
         <Wholesale />
         <Faq limit={6} moreHref="/opt#faq" />
-        <Contacts />
       </main>
     </>
   );

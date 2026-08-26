@@ -7,13 +7,12 @@ export const site = {
   legalName: "ИП Зорин Юрий Сергеевич",
   inn: "20909196510025",
   url: "https://zorin-fashion.com",
-  // Корпоративный email ещё не зарегистрирован (на 2026-08-17) — не показывать
-  // на сайте, пока не появится реальный адрес на домене.
-  email: null as string | null,
+  email: "sales.zorin@gmail.com",
   phones: [{ raw: "+996555185959", label: "+996 (555) 18-59-59" }],
   whatsapp: "https://wa.me/996555185959",
   telegram: "https://t.me/+996555185959",
   max: "https://max.ru/u/f9LHodD0cOL5IvE_-G9nXi2-wmf8lIqUkMWXtnGiPmNAxKOmW7654JcMKLg",
+  instagram: "https://www.instagram.com/zorin_manufactory1/",
   contactPerson: "Антон Зорин, отдел продаж",
   address: {
     full: "Кыргызская Республика, 720000, г. Бишкек, Ленинский район, с. Новопавловка, ул. Степная, 10",

@@ -87,12 +87,12 @@ export function Header() {
           ))}
         </nav>
 
-        <a
-          href={`tel:${primaryPhone.raw}`}
+        <Link
+          href="/kontakty"
           className="hidden items-center rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition-[opacity,transform] hover:opacity-85 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent lg:flex"
         >
           {primaryPhone.label}
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -158,12 +158,13 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <a
-            href={`tel:${primaryPhone.raw}`}
+          <Link
+            href="/kontakty"
+            onClick={() => setOpen(false)}
             className="mt-2 rounded-full bg-foreground px-2 py-2.5 text-center text-sm font-semibold text-background transition-[opacity,transform] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           >
             {primaryPhone.label}
-          </a>
+          </Link>
         </nav>
       )}
     </header>

@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Faq } from "@/components/Faq";
-import { site } from "@/lib/site";
 import { faqItems } from "@/lib/faq";
 import { faqPageJsonLd, jsonLdScript } from "@/lib/seo";
 
@@ -111,7 +110,6 @@ const weDont = [
 ];
 
 export default function OptPage() {
-  const primaryPhone = site.phones[0];
 
   return (
     <>
@@ -267,12 +265,12 @@ export default function OptPage() {
           </div>
 
           <div className="mt-14 flex flex-wrap items-center gap-4">
-            <a
-              href={`tel:${primaryPhone.raw}`}
+            <Link
+              href="/kontakty"
               className="inline-flex items-center rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-[opacity,transform] hover:opacity-85 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               Обсудить заказ
-            </a>
+            </Link>
             <Link
               href="/produktsiya"
               className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"

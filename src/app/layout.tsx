@@ -71,7 +71,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     name: site.name,
     legalName: site.legalName,
     url: site.url,
-    ...(site.email ? { email: site.email } : {}),
+    email: site.email,
     telephone: site.phones.map((p) => p.raw),
     description,
     foundingDate: String(site.stats.foundedYear),

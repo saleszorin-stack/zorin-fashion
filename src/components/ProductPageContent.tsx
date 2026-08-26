@@ -5,7 +5,6 @@ import { site } from "@/lib/site";
 import { products, type ProductDetail } from "@/lib/products";
 
 export function ProductPageContent({ product }: { product: ProductDetail }) {
-  const primaryPhone = site.phones[0];
   const otherProducts = products.filter((p) => p.slug !== product.slug);
 
   const jsonLd = {
@@ -97,12 +96,12 @@ export function ProductPageContent({ product }: { product: ProductDetail }) {
           </div>
 
           <div className="mt-14 flex flex-wrap items-center gap-x-6 gap-y-3">
-            <a
-              href={`tel:${primaryPhone.raw}`}
+            <Link
+              href="/kontakty"
               className="inline-flex items-center rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-[opacity,transform] hover:opacity-85 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               Обсудить партию
-            </a>
+            </Link>
             <Link
               href="/opt"
               className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"

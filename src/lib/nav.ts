@@ -8,7 +8,7 @@ export const navLinks = [
   { href: "/opt", label: "Опт" },
   { href: "/o-fabrike", label: "О фабрике" },
   { href: "/blog", label: "Блог" },
-  { href: "/#contacts", label: "Контакты" },
+  { href: "/kontakty", label: "Контакты" },
 ] as const;
 
 export const productLines = [
