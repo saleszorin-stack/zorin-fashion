@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { ClientLogos } from "@/components/ClientLogos";
+import { WhyZorin } from "@/components/WhyZorin";
 import { TrustStatement } from "@/components/TrustStatement";
 import { About } from "@/components/About";
 import { Products } from "@/components/Products";
@@ -20,6 +21,7 @@ export default function Home() {
       <main>
         <Hero />
         <ClientLogos />
+        <WhyZorin />
         <TrustStatement />
         <About />
         <Products />

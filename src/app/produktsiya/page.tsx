@@ -7,7 +7,7 @@ import { products } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Продукция — мужская классика оптом",
   description:
-    "Костюмы, пиджаки, брюки и жилеты классического кроя от производителя ZORIN в Бишкеке. Поточное производство полного цикла, от 500 единиц на модель.",
+    "Костюмы, пиджаки, брюки, жилеты и школьная форма классического кроя от производителя ZORIN в Бишкеке. Поточное производство полного цикла, от 300 единиц на модель одного цвета.",
   keywords: [
     "мужская одежда оптом кыргызстан",
     "производитель мужской классики бишкек",
@@ -30,16 +30,16 @@ export default function ProduktsiyaPage() {
             Мужская классика от производителя
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
-            Четыре линии продукции — костюмы, пиджаки, брюки и жилеты.
+            Костюмы, пиджаки, брюки, жилеты и школьная форма для мальчиков.
             Поточное производство полного цикла: раскрой, пошив и отделка на
-            одной фабрике в Бишкеке. От 500 единиц на модель.
+            одной фабрике в Бишкеке. От 300 единиц на модель одного цвета.
           </p>
         </div>
       </section>
 
       <section>
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+          <div className="grid gap-8 [grid-template-columns:repeat(auto-fit,minmax(220px,1fr))]">
             {products.map((p, i) => (
               <Link
                 key={p.slug}
@@ -47,24 +47,22 @@ export default function ProduktsiyaPage() {
                 className="group rounded-sm transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:opacity-90"
               >
                 <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-background-panel">
-                  <Image
-                    src={p.heroImage}
-                    alt={p.heroAlt}
-                    fill
-                    priority={i === 0}
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
+                  {p.heroImage ? (
+                    <Image
+                      src={p.heroImage}
+                      alt={p.heroAlt}
+                      fill
+                      priority={i === 0}
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-foreground/[0.06]" />
+                  )}
                 </div>
                 <h2 className="font-display mt-4 text-xl font-bold text-foreground">
                   {p.nav}
                 </h2>
-                <p className="eyebrow mt-1.5 text-accent">
-                  {p.specs[0].value} · {p.specs[1].value}
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {p.intro[0]}
-                </p>
               </Link>
             ))}
           </div>

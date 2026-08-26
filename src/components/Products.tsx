@@ -39,6 +39,15 @@ const products = [
     description:
       "Жилеты в комплект к костюмным тройкам и как отдельная позиция ассортимента.",
   },
+  {
+    slug: "shkolnaya-forma",
+    index: "05",
+    image: "/images/product-school.jpg",
+    alt: "Значок префекта на школьном пиджаке классического кроя",
+    title: "Школьная форма",
+    description:
+      "Костюмы, пиджаки и брюки для мальчиков — тот же уровень контроля, что и во взрослой линии.",
+  },
 ];
 
 export function Products() {
@@ -47,7 +56,7 @@ export function Products() {
       <Reveal className="py-14 sm:py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <h2 className="font-serif max-w-xl text-3xl font-semibold text-foreground sm:text-4xl">
-            Четыре линии мужской классики
+            Продуктовая линейка
           </h2>
         </div>
       </Reveal>
@@ -61,13 +70,17 @@ export function Products() {
             <div
               className={`relative aspect-[4/3] overflow-hidden md:aspect-auto ${i % 2 === 1 ? "md:order-2" : ""}`}
             >
-              <Image
-                src={p.image}
-                alt={p.alt}
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+              {p.image ? (
+                <Image
+                  src={p.image}
+                  alt={p.alt}
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              ) : (
+                <div className="absolute inset-0 bg-foreground/[0.04]" />
+              )}
             </div>
             <div className="flex flex-col justify-center px-5 py-14 sm:px-8 sm:py-20 md:px-16">
               <span className="eyebrow text-accent">{p.index}</span>

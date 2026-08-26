@@ -36,4 +36,10 @@ export const productLines = [
     nav: "Жилеты",
     image: "/images/product-vests.jpg",
   },
+  {
+    slug: "shkolnaya-forma",
+    title: "Школьная форма",
+    nav: "Школьная форма",
+    image: "/images/product-school.jpg",
+  },
 ] as const;

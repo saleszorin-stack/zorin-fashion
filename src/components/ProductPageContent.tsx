@@ -36,14 +36,18 @@ export function ProductPageContent({ product }: { product: ProductDetail }) {
       />
 
       <section className="relative h-[46vh] min-h-[320px] w-full overflow-hidden">
-        <Image
-          src={product.heroImage}
-          alt={product.heroAlt}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        {product.heroImage ? (
+          <Image
+            src={product.heroImage}
+            alt={product.heroAlt}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-foreground/[0.06]" />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
         <div className="relative mx-auto flex h-full max-w-6xl items-end px-5 pb-10 sm:px-8">
           <h1 className="font-serif max-w-2xl text-4xl font-semibold text-white sm:text-5xl">
@@ -123,20 +127,24 @@ export function ProductPageContent({ product }: { product: ProductDetail }) {
           <h2 className="font-serif text-3xl font-semibold text-foreground sm:text-4xl">
             Другие линии продукции
           </h2>
-          <div className="mt-6 grid gap-5 sm:grid-cols-3">
+          <div className="mt-6 grid gap-5 grid-cols-2 lg:grid-cols-4">
             {otherProducts.map((p) => (
               <Link
                 key={p.slug}
                 href={`/${p.slug}`}
                 className="group relative aspect-[16/9] overflow-hidden rounded-xl transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:opacity-90"
               >
-                <Image
-                  src={p.heroImage}
-                  alt={p.heroAlt}
-                  fill
-                  sizes="(min-width: 640px) 50vw, 100vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                {p.heroImage ? (
+                  <Image
+                    src={p.heroImage}
+                    alt={p.heroAlt}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, 50vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-foreground/[0.06]" />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                 <span className="font-display absolute bottom-4 left-5 text-xl font-bold text-white">
                   {p.nav}

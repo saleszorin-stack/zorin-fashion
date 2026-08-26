@@ -9,7 +9,7 @@ import { jsonLdScript } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Пошив корпоративной формы и униформы оптом",
   description:
-    "Пошив корпоративной формы и униформы для банков, отелей, авиакомпаний и охранных структур на фабрике ZORIN в Бишкеке. Участвуем в тендерах, от 500 единиц на модель.",
+    "Пошив корпоративной формы и униформы для банков, отелей, авиакомпаний и охранных структур на фабрике ZORIN в Бишкеке. Участвуем в тендерах, от 300 единиц на модель одного цвета.",
   keywords: [
     "пошив корпоративной формы оптом",
     "пошив униформы для банков",
@@ -78,8 +78,8 @@ export default function KorporativnayaOdezhdaPage() {
               единым лекалам для всего штата. Участвуем в тендерах.
             </p>
             <p>
-              Условия те же, что и для брендов: от 500 единиц на модель,
-              единая производственная база в Бишкеке с{" "}
+              Условия те же, что и для брендов: от 300 единиц на модель
+              одного цвета, единая производственная база в Бишкеке с{" "}
               {site.stats.foundedYear} года, {site.stats.employees}{" "}
               сотрудников, полный цикл — раскрой, пошив, финальная отделка
               без подрядчиков на стороне.
@@ -122,13 +122,17 @@ export default function KorporativnayaOdezhdaPage() {
                 href={`/${p.slug}`}
                 className="group relative aspect-[4/5] overflow-hidden rounded-xl transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:opacity-90"
               >
-                <Image
-                  src={p.image}
-                  alt={p.title}
-                  fill
-                  sizes="(min-width: 640px) 25vw, 50vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                {p.image ? (
+                  <Image
+                    src={p.image}
+                    alt={p.title}
+                    fill
+                    sizes="(min-width: 640px) 25vw, 50vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-foreground/[0.06]" />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                 <span className="font-display absolute bottom-3 left-4 text-base font-bold text-white">
                   {p.nav}

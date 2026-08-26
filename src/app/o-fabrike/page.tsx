@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { site } from "@/lib/site";
+import { imageClients, textOnlyClients } from "@/lib/clients";
 
 export const metadata: Metadata = {
   title: "О фабрике — история и производство",
@@ -25,8 +26,6 @@ const equipment = [
   { label: "Мощность костюмно-пиджачной группы", value: "8 000 изделий в месяц" },
   { label: "Мощность брючной группы", value: "10 000 изделий в месяц" },
 ];
-
-const clients = ["Сударь", "Stenser", "Magman", "Стрекоза"];
 
 export default function OFabrikePage() {
   return (
@@ -132,17 +131,31 @@ export default function OFabrikePage() {
           <p className="mt-4 text-base leading-relaxed text-muted">
             Среди клиентов, чьё упоминание согласовано: сеть магазинов
             «Сударь», торговые марки Stenser, Magman, «Стрекоза» — часть
-            из них работает с ZORIN по 17, 8 и 5 лет. У ZORIN есть
-            собственная торговая марка, зарегистрированная в России, —
-            заказчики без своего бренда могут выпускать продукцию под ней.
+            из них работает с ZORIN по 17, 8 и 5 лет. Также среди клиентов —
+            Melon Fashion Group, Zolla и немецкая сеть магазинов KiK.
+            Отдельно среди реализованных проектов — форма для аэропорта
+            Шереметьево и парадная форма Олимпийской сборной Кыргызстана.
+            У ZORIN есть собственная торговая марка, зарегистрированная в
+            России, — заказчики без своего бренда могут выпускать
+            продукцию под ней.
           </p>
-          <div className="mt-6 flex flex-wrap items-center gap-x-10 gap-y-4">
-            {clients.map((c) => (
+          <div className="mt-6 flex flex-wrap items-center gap-x-10 gap-y-6">
+            {imageClients.map((c) => (
+              <Image
+                key={c.name}
+                src={c.src}
+                alt={c.name}
+                width={c.width}
+                height={c.height}
+                className="h-6 w-auto opacity-80 transition-opacity hover:opacity-100 sm:h-7"
+              />
+            ))}
+            {textOnlyClients.map((name) => (
               <span
-                key={c}
+                key={name}
                 className="font-display text-sm font-semibold tracking-wide text-foreground/50"
               >
-                {c}
+                {name}
               </span>
             ))}
           </div>
