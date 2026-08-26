@@ -5,7 +5,7 @@ export const transparentHeaderPaths = ["/"] as const;
 
 export const navLinks = [
   { href: "/produktsiya", label: "Продукция" },
-  { href: "/opt", label: "Опт" },
+  { href: "/opt", label: "Сотрудничество" },
   { href: "/o-fabrike", label: "О фабрике" },
   { href: "/blog", label: "Блог" },
   { href: "/kontakty", label: "Контакты" },

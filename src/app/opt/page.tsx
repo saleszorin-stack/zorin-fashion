@@ -117,13 +117,13 @@ export default function OptPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdScript(faqPageJsonLd(faqItems)) }}
       />
-      <Breadcrumbs items={[{ label: "Опт" }]} />
+      <Breadcrumbs items={[{ label: "Сотрудничество" }]} />
 
       <section className="border-b border-border">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 sm:py-20 md:grid-cols-[1.2fr_0.8fr] md:items-center">
           <div>
             <p className="eyebrow text-accent">
-              Опт
+              Сотрудничество
             </p>
             <h1 className="font-serif mt-4 text-4xl font-semibold leading-[1.08] text-foreground sm:text-5xl">
               Оптовый пошив мужской одежды
