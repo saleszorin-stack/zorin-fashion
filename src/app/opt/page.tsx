@@ -110,7 +110,6 @@ const weDont = [
 ];
 
 export default function OptPage() {
-
   return (
     <>
       <script
