@@ -109,7 +109,7 @@ export default function KorporativnayaOdezhdaPage() {
           <p className="eyebrow mt-14 text-accent">Брендирование</p>
           <div className="mt-4 bg-accent-soft p-6 sm:p-8">
             <p className="max-w-2xl text-sm leading-relaxed text-muted">
-              Наносим ваши лейблы, бирки и фирменную символику компании —
+              Наносим ваши лейблы, бирки и нашивки с символикой компании —
               форма выходит с производства уже готовой к выдаче персоналу.
             </p>
           </div>

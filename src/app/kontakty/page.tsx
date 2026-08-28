@@ -1,14 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ContactChannels } from "@/components/ContactChannels";
 import { site } from "@/lib/site";
-import {
-  EmailIcon,
-  InstagramIcon,
-  MaxIcon,
-  PhoneIcon,
-  TelegramIcon,
-  WhatsAppIcon,
-} from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Контакты — как связаться с ZORIN",
@@ -21,51 +14,6 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/kontakty" },
 };
-
-const channels = [
-  {
-    icon: PhoneIcon,
-    label: "Телефон",
-    value: site.phones[0].label,
-    href: `tel:${site.phones[0].raw}`,
-    external: false,
-  },
-  {
-    icon: WhatsAppIcon,
-    label: "WhatsApp",
-    value: "Написать в WhatsApp",
-    href: site.whatsapp,
-    external: true,
-  },
-  {
-    icon: TelegramIcon,
-    label: "Telegram",
-    value: "Написать в Telegram",
-    href: site.telegram,
-    external: true,
-  },
-  {
-    icon: MaxIcon,
-    label: "MAX",
-    value: "Написать в MAX",
-    href: site.max,
-    external: true,
-  },
-  {
-    icon: InstagramIcon,
-    label: "Instagram",
-    value: "Открыть Instagram",
-    href: site.instagram,
-    external: true,
-  },
-  {
-    icon: EmailIcon,
-    label: "Email",
-    value: site.email,
-    href: `mailto:${site.email}`,
-    external: false,
-  },
-] as const;
 
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.address.mapsQuery)}`;
 
@@ -85,25 +33,7 @@ export default function KontaktyPage() {
             удобный способ связи.
           </p>
 
-          <dl className="mt-12 divide-y divide-border border-t border-border">
-            {channels.map((c) => (
-              <div key={c.label} className="flex items-center gap-4 py-5">
-                <c.icon className="h-6 w-6 shrink-0 text-accent" />
-                <dt className="w-24 shrink-0 font-display text-sm font-bold text-foreground sm:w-28">
-                  {c.label}
-                </dt>
-                <dd>
-                  <a
-                    href={c.href}
-                    {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    className="text-base font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                  >
-                    {c.value}
-                  </a>
-                </dd>
-              </div>
-            ))}
-          </dl>
+          <ContactChannels />
 
           <div className="mt-14 border-t border-border pt-10">
             <p className="eyebrow text-accent">Адрес</p>

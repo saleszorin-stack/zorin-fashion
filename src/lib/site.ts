@@ -31,3 +31,5 @@ export const site = {
     annualOutput: 80000,
   },
 } as const;
+
+export const YANDEX_METRIKA_ID = 112037194;
