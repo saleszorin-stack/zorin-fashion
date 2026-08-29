@@ -99,6 +99,15 @@ export function ProductPageContent({ product }: { product: ProductDetail }) {
             </p>
           </div>
 
+          {product.extraSections?.map((s) => (
+            <div key={s.title}>
+              <h2 className="eyebrow mt-14 text-accent">{s.title}</h2>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
+                {s.body}
+              </p>
+            </div>
+          ))}
+
           <div className="mt-14 flex flex-wrap items-center gap-x-6 gap-y-3">
             <Link
               href="/kontakty"
