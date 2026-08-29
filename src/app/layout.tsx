@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
     default: title,
-    template: "%s — Zorin Fashion",
+    template: "%s — ZORIN",
   },
   description,
   keywords: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "контрактное производство одежды",
     "отшив по лекалам заказчика OEM",
     "производство одежды под своим брендом private label",
-    "ZORIN Fashion",
+    "ZORIN",
     "производство одежды в Кыргызстане для России",
   ],
   authors: [{ name: "ZORIN" }],
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ru_RU",
     url: site.url,
-    siteName: "Zorin Fashion",
+    siteName: "ZORIN",
     title,
     description,
     images: [{ url: "/images/hero.jpg", width: 1200, height: 800, alt: title }],

@@ -1,9 +1,8 @@
 export const site = {
-  // Зарегистрированная торговая марка — "ZORIN" (см. бриф). "Zorin Fashion"
-  // оставлено как рабочее маркетинговое название сайта до подтверждения
-  // клиентом — см. AGENT_START_HERE.md.
-  name: "Zorin Fashion",
-  brandMark: "ZORIN",
+  // Единственное название бренда — "ZORIN", подтверждено клиентом
+  // 2026-08-29 (см. AGENT_START_HERE.md). Домен zorin-fashion.com не
+  // трогаем — это отдельный вопрос от текстового именования бренда.
+  name: "ZORIN",
   legalName: "ИП Зорин Юрий Сергеевич",
   inn: "20909196510025",
   url: "https://zorin-fashion.com",
