@@ -46,9 +46,17 @@ export function Footer() {
           </div>
         </div>
 
-        <p className="mt-6 border-t border-invert-foreground/15 pt-6 text-xs">
-          © {new Date().getFullYear()} {site.name} · {site.legalName}, ИНН{" "}
-          {site.inn}
+        <p className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-invert-foreground/15 pt-6 text-xs">
+          <span>
+            © {new Date().getFullYear()} {site.name} · {site.legalName}, ИНН{" "}
+            {site.inn}
+          </span>
+          <Link
+            href="/politika-konfidentsialnosti"
+            className="text-invert-foreground/50 underline decoration-invert-foreground/30 underline-offset-2 transition-colors hover:text-invert-foreground rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-invert-background"
+          >
+            Политика конфиденциальности
+          </Link>
         </p>
       </div>
     </footer>
