@@ -39,6 +39,12 @@ yarn-error.log*
 # claude code local tooling (skills, not part of the site)
 .claude/
 
+# внутренние справочные материалы (бриф, семантическое ядро, исходники
+# логотипов) — не для публичного репозитория, передаются отдельно
+# (флешка/облако), см. materials/README.md
+materials/*
+!materials/README.md
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
