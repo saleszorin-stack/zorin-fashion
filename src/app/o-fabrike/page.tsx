@@ -70,7 +70,14 @@ export default function OFabrikePage() {
               {site.stats.employees} сотрудников, включая собственный отдел
               контроля качества из 4 человек. Модель не переходит между
               случайными подрядчиками, поэтому посадка изделий не
-              меняется от партии к партии.
+              меняется от партии к партии — что это значит на практике,{" "}
+              <Link
+                href="/blog/polny-cikl-proizvodstva-odezhdy"
+                className="rounded-sm text-accent underline decoration-2 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:opacity-70"
+              >
+                разбираем в отдельной статье
+              </Link>
+              .
             </p>
             <p>
               Сегодня фабрика выпускает около{" "}

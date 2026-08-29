@@ -33,6 +33,14 @@ export default function ProduktsiyaPage() {
             Костюмы, пиджаки, брюки, жилеты и школьная форма для мальчиков.
             Поточное производство полного цикла: раскрой, пошив и отделка на
             одной фабрике в Бишкеке. От 300 единиц на модель одного цвета.
+            Если выбираете между производителями — короткий чек-лист{" "}
+            <Link
+              href="/blog/kak-vybrat-proizvoditelya-kostyumov-optom"
+              className="rounded-sm text-accent underline decoration-2 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:opacity-70"
+            >
+              в статье
+            </Link>
+            .
           </p>
         </div>
       </section>
