@@ -53,32 +53,29 @@ export function PartnersAndCases() {
           <h2 className="font-serif text-balance text-center text-3xl font-semibold text-foreground sm:text-4xl">
             Наши партнёры и проекты
           </h2>
-          <div className="mt-10 grid gap-8 divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-            <div className="text-center sm:px-6">
-              <p className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">
+          <div className="mt-10 grid gap-8 divide-y divide-border sm:grid-cols-2 sm:divide-x sm:divide-y-0">
+            <div className="flex flex-col items-center text-center sm:px-8">
+              <p className="font-serif flex min-h-16 items-center text-2xl font-semibold text-foreground sm:min-h-20 sm:text-3xl">
                 Аэропорт Шереметьево
               </p>
               <p className="mt-2 text-sm text-muted">
                 Форма для персонала
               </p>
             </div>
-            <div className="pt-8 text-center sm:px-6 sm:pt-0">
-              <p className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">
+            <div className="flex flex-col items-center pt-8 text-center sm:px-8 sm:pt-0">
+              <p className="font-serif flex min-h-16 items-center text-2xl font-semibold text-foreground sm:min-h-20 sm:text-3xl">
                 Олимпийская сборная Кыргызстана
               </p>
               <p className="mt-2 text-sm text-muted">
                 Парадная форма
               </p>
             </div>
-            <div className="pt-8 text-center sm:px-6 sm:pt-0">
-              <p className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">
-                Сударь, Zolla, Stenser и другие
-              </p>
-              <p className="mt-2 text-sm text-muted">
-                Melon Fashion Group, KiK, Стрекоза тоже среди клиентов
-              </p>
-            </div>
           </div>
+
+          <p className="mt-10 border-t border-border pt-6 text-center text-sm text-muted">
+            Также среди клиентов: Сударь, Zolla, Stenser, Melon Fashion
+            Group, KiK, Стрекоза.
+          </p>
         </div>
       </div>
     </section>
