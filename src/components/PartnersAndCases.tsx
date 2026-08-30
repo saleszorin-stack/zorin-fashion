@@ -43,18 +43,18 @@ export function PartnersAndCases() {
         <LogoRow reverse />
       </div>
 
-      <div className="relative mx-auto max-w-3xl px-5 sm:px-8">
+      <div className="relative mx-auto max-w-4xl px-5 sm:px-8">
         <div
           aria-hidden
           className="absolute inset-0 bg-background/70 backdrop-blur-md [mask-image:radial-gradient(ellipse_75%_80%_at_center,black_45%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_75%_80%_at_center,black_45%,transparent_100%)]"
         />
 
         <div className="relative px-6 py-10 sm:px-10 sm:py-12">
-          <p className="eyebrow text-center text-accent">
+          <h2 className="font-serif text-balance text-center text-3xl font-semibold text-foreground sm:text-4xl">
             Наши партнёры и проекты
-          </p>
-          <div className="mt-8 grid gap-8 divide-y divide-border sm:grid-cols-2 sm:divide-x sm:divide-y-0">
-            <div className="text-center sm:pr-8">
+          </h2>
+          <div className="mt-10 grid gap-8 divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+            <div className="text-center sm:px-6">
               <p className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">
                 Аэропорт Шереметьево
               </p>
@@ -62,12 +62,20 @@ export function PartnersAndCases() {
                 Форма для персонала
               </p>
             </div>
-            <div className="pt-8 text-center sm:pt-0 sm:pl-8">
+            <div className="pt-8 text-center sm:px-6 sm:pt-0">
               <p className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">
                 Олимпийская сборная Кыргызстана
               </p>
               <p className="mt-2 text-sm text-muted">
                 Парадная форма
+              </p>
+            </div>
+            <div className="pt-8 text-center sm:px-6 sm:pt-0">
+              <p className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">
+                Сударь, Zolla, Stenser и другие
+              </p>
+              <p className="mt-2 text-sm text-muted">
+                Melon Fashion Group, KiK, Стрекоза тоже среди клиентов
               </p>
             </div>
           </div>

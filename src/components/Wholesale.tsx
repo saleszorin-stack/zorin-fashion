@@ -1,29 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const advantages = [
-  {
-    title: "Полный цикл на 1 800 м²",
-    description:
-      "Раскрой на комплексе Gerber, пошив, ВТО и контроль ОТК — без субподрядчиков, всё на одной площадке.",
-  },
-  {
-    title: "Контроль на трёх уровнях",
-    description:
-      "Разбраковка ткани на входе, контроль в процессе пошива и финальная приёмка ОТК — на каждой партии, а не выборочно.",
-  },
-  {
-    title: "Ткань выбираете вы",
-    description:
-      "Закупаем, оплачиваем и привозим её мы — вам не нужна внешнеэкономическая сделка с поставщиком.",
-  },
-  {
-    title: "Кыргызстан — страна ЕАЭС",
-    description:
-      "Поставка в Россию и Казахстан без ввозных таможенных пошлин, полный комплект товаросопроводительных документов.",
-  },
-];
-
 export function Wholesale() {
   return (
     <section id="wholesale" className="border-b border-border">
@@ -48,25 +25,11 @@ export function Wholesale() {
 
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
         <p className="max-w-2xl text-base leading-relaxed text-muted">
-          Один цикл — от разработки модели до готовой партии на одной
-          производственной базе. Работаем с российскими брендами,
-          оптовыми компаниями и корпоративными заказчиками.
+          Полные условия: минимальная партия, сроки, порядок расчётов и
+          документы, шаг за шагом.
         </p>
 
-        <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 lg:grid-cols-4">
-          {advantages.map((item) => (
-            <div key={item.title} className="border-t border-border pt-5">
-              <h3 className="font-display text-lg font-bold text-foreground">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
+        <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
           <Link
             href="/opt"
             className="inline-flex items-center rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-[opacity,transform] hover:opacity-85 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
