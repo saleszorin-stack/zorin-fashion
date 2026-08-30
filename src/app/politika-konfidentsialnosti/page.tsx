@@ -16,7 +16,7 @@ export default function PolitikaKonfidentsialnostiPage() {
       <Breadcrumbs items={[{ label: "Политика конфиденциальности" }]} />
 
       <section>
-        <div className="mx-auto max-w-3xl px-5 py-14 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-2xl px-5 py-14 sm:px-8 sm:py-20">
           <p className="eyebrow text-accent">Правовая информация</p>
           <h1 className="font-serif mt-4 text-4xl font-semibold text-foreground sm:text-5xl">
             Политика конфиденциальности
@@ -37,7 +37,7 @@ export default function PolitikaKonfidentsialnostiPage() {
             </p>
           </div>
 
-          <h2 className="font-serif mt-14 text-3xl font-semibold text-foreground sm:text-4xl">
+          <h2 className="font-display mt-14 text-xl font-bold text-foreground sm:text-2xl">
             1. Оператор персональных данных
           </h2>
           <div className="mt-4 space-y-1 text-base leading-relaxed text-muted">
@@ -47,7 +47,7 @@ export default function PolitikaKonfidentsialnostiPage() {
             <p>Email: {site.email}</p>
           </div>
 
-          <h2 className="font-serif mt-14 text-3xl font-semibold text-foreground sm:text-4xl">
+          <h2 className="font-display mt-14 text-xl font-bold text-foreground sm:text-2xl">
             2. Какие данные собираются и зачем
           </h2>
           <div className="mt-4 space-y-4 text-base leading-relaxed text-muted">
@@ -59,20 +59,27 @@ export default function PolitikaKonfidentsialnostiPage() {
             </p>
             <p>
               Отдельно от этого Сайт использует сервис веб-аналитики
-              Яндекс.Метрика, который автоматически собирает IP-адрес,
-              файлы cookie, данные браузера и устройства, а также сведения о
-              посещённых страницах и переходах. Если на Сайте включён
-              веб-визор Метрики, он дополнительно записывает движения
-              курсора, клики и прокрутку в рамках сессии — это запись
-              поведения конкретного посетителя, связанная с его IP-адресом,
-              а не полностью анонимная статистика. Мы используем эти данные
-              только для того, чтобы понять, насколько удобно пользоваться
-              Сайтом, и оценить, откуда приходят посетители — не для того,
-              чтобы устанавливать личность конкретного человека.
+              Яндекс.Метрика, который автоматически собирает:
+            </p>
+            <ul className="list-disc space-y-2 pl-5">
+              <li>IP-адрес, файлы cookie, данные браузера и устройства;</li>
+              <li>сведения о посещённых страницах и переходах;</li>
+              <li>
+                если на Сайте включён веб-визор Метрики — движения курсора,
+                клики и прокрутку в рамках сессии; это запись поведения
+                конкретного посетителя, связанная с его IP-адресом, а не
+                полностью анонимная статистика.
+              </li>
+            </ul>
+            <p>
+              Мы используем эти данные только для того, чтобы понять,
+              насколько удобно пользоваться Сайтом, и оценить, откуда
+              приходят посетители — не для того, чтобы устанавливать личность
+              конкретного человека.
             </p>
           </div>
 
-          <h2 className="font-serif mt-14 text-3xl font-semibold text-foreground sm:text-4xl">
+          <h2 className="font-display mt-14 text-xl font-bold text-foreground sm:text-2xl">
             3. Передача данных третьим лицам
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted">
@@ -82,7 +89,7 @@ export default function PolitikaKonfidentsialnostiPage() {
             рекламных или коммерческих целях, кроме описанного в разделе 2.
           </p>
 
-          <h2 className="font-serif mt-14 text-3xl font-semibold text-foreground sm:text-4xl">
+          <h2 className="font-display mt-14 text-xl font-bold text-foreground sm:text-2xl">
             4. Cookie и хранение данных
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted">
@@ -94,7 +101,7 @@ export default function PolitikaKonfidentsialnostiPage() {
             видим эту статистику через интерфейс Метрики.
           </p>
 
-          <h2 className="font-serif mt-14 text-3xl font-semibold text-foreground sm:text-4xl">
+          <h2 className="font-display mt-14 text-xl font-bold text-foreground sm:text-2xl">
             5. Права посетителя
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted">
