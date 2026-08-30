@@ -35,7 +35,7 @@ html {
   --color-invert-foreground: var(--invert-foreground);
   --font-display: var(--font-body);
   --font-body: var(--font-body);
-  --font-serif: var(--font-body);
+  --font-serif: var(--font-serif);
 }
 
 * {
@@ -53,8 +53,8 @@ body {
 }
 
 .font-serif {
-  font-family: var(--font-body), sans-serif;
-  letter-spacing: -0.02em;
+  font-family: var(--font-serif), serif;
+  letter-spacing: -0.01em;
 }
 
 .eyebrow {
@@ -69,7 +69,7 @@ body {
 }
 
 .drop-cap:first-letter {
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-serif), serif;
   float: left;
   font-size: 4.2em;
   line-height: 0.85;

@@ -24,10 +24,17 @@ export function Reveal({
           observer.disconnect();
         }
       },
-      { threshold: 0.15 },
+      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" },
     );
     observer.observe(el);
-    return () => observer.disconnect();
+    // Safety net: a JS hiccup, a restored scroll position, or a non-standard
+    // render path (crawlers, print) can leave the observer never firing —
+    // don't let a section stay permanently invisible.
+    const fallback = window.setTimeout(() => setVisible(true), 2500);
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(fallback);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps -- mount-only setup; `visible` is read from its initial value only
   }, []);
 
