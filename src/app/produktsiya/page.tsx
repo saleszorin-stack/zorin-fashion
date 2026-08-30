@@ -48,7 +48,7 @@ export default function ProduktsiyaPage() {
 
       <section>
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
-          <div className="grid gap-8 [grid-template-columns:repeat(auto-fit,minmax(220px,1fr))]">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
             {products.map((p, i) => (
               <Link
                 key={p.slug}

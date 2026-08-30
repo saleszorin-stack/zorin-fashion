@@ -44,7 +44,7 @@ export default function BlogIndexPage() {
 
       <section>
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
-          <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2">
+          <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {sorted.map((article, i) => (
               <Link
                 key={article.slug}

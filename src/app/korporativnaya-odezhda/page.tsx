@@ -107,15 +107,13 @@ export default function KorporativnayaOdezhdaPage() {
           </div>
 
           <p className="eyebrow mt-14 text-accent">Брендирование</p>
-          <div className="mt-4 bg-accent-soft p-6 sm:p-8">
-            <p className="max-w-2xl text-sm leading-relaxed text-muted">
-              Наносим ваши лейблы, бирки и нашивки с символикой компании —
-              форма выходит с производства уже готовой к выдаче персоналу.
-            </p>
-          </div>
+          <p className="mt-4 max-w-2xl border-t border-border pt-6 text-sm leading-relaxed text-muted">
+            Наносим ваши лейблы, бирки и нашивки с символикой компании —
+            форма выходит с производства уже готовой к выдаче персоналу.
+          </p>
 
           <p className="eyebrow mt-14 text-accent">Линии продукции</p>
-          <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
             {productLines.map((p) => (
               <Link
                 key={p.slug}
