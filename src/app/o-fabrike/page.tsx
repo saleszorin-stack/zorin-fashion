@@ -35,8 +35,8 @@ export default function OFabrikePage() {
       <section className="grid md:grid-cols-2">
         <div className="relative h-72 md:h-auto">
           <Image
-            src="/images/about.jpg"
-            alt="Готовый костюм на манекене в мастерской"
+            src="/images/o-fabrike-hero.jpg"
+            alt="Готовый костюм классического кроя на модели"
             fill
             priority
             sizes="(min-width: 768px) 50vw, 100vw"
