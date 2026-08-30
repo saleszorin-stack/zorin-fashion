@@ -88,14 +88,14 @@ export default async function ArticlePage({
           >
             {formatDate(article.date)}
           </time>
-          <h1 className="font-serif mt-3 text-4xl font-semibold leading-[1.1] text-foreground sm:text-5xl">
+          <h1 className="font-serif mt-3 max-w-2xl text-4xl font-semibold leading-[1.1] text-foreground sm:text-5xl">
             {article.title}
           </h1>
 
-          <div className="mt-10 space-y-5 text-base leading-relaxed text-muted">
+          <div className="mt-10 max-w-2xl space-y-5 text-base leading-relaxed text-muted">
             {(() => {
               const firstParagraphIndex = article.body.findIndex(
-                (b) => b.type !== "h2" && b.type !== "list" && b.type !== "quote",
+                (b) => b.type !== "h2" && b.type !== "list" && b.type !== "quote" && b.type !== "compare",
               );
               return article.body.map((block, i) => {
                 if (block.type === "h2") {
@@ -115,6 +115,20 @@ export default async function ArticlePage({
                         <li key={j}>{item}</li>
                       ))}
                     </ul>
+                  );
+                }
+                if (block.type === "compare") {
+                  return (
+                    <dl key={i} className="divide-y divide-border border-y border-border">
+                      {block.items.map((item, j) => (
+                        <div key={j} className="grid gap-1 py-5 sm:grid-cols-[9rem_1fr] sm:gap-6">
+                          <dt className="font-display font-bold text-foreground">
+                            {item.term}
+                          </dt>
+                          <dd>{item.description}</dd>
+                        </div>
+                      ))}
+                    </dl>
                   );
                 }
                 if (block.type === "quote") {
@@ -137,16 +151,19 @@ export default async function ArticlePage({
           </div>
 
           {article.relatedLinks.length > 0 && (
-            <div className="mt-14 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border pt-10">
-              {article.relatedLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                >
-                  {link.label} →
-                </Link>
-              ))}
+            <div className="mt-14 max-w-2xl border-t border-border pt-10">
+              <p className="eyebrow text-accent">Читать также</p>
+              <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-3">
+                {article.relatedLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  >
+                    {link.label} →
+                  </Link>
+                ))}
+              </div>
             </div>
           )}
         </div>
