@@ -19,7 +19,7 @@ const products = [
     alt: "Застёгивание пуговицы классического пиджака",
     title: "Пиджаки",
     description:
-      "Однобортные и двубортные модели с точной посадкой по плечу, отдельным пошивом под ассортиментную линейку.",
+      "Однобортные и двубортные модели с точной посадкой по плечу, отдельным пошивом под ассортиментную линию.",
   },
   {
     slug: "bryuki",
@@ -56,7 +56,7 @@ export function Products() {
       <Reveal className="py-14 sm:py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <h2 className="font-serif max-w-xl text-3xl font-semibold text-foreground sm:text-4xl">
-            Продуктовая линейка
+            Продуктовая линия
           </h2>
         </div>
       </Reveal>

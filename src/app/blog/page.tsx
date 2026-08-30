@@ -49,9 +49,9 @@ export default function BlogIndexPage() {
               <Link
                 key={article.slug}
                 href={`/blog/${article.slug}`}
-                className="group rounded-sm transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:opacity-90"
+                className="group overflow-hidden rounded-2xl bg-background-panel transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:opacity-90"
               >
-                <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-background-panel">
+                <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
                     src={article.image}
                     alt={article.imageAlt}
@@ -61,18 +61,20 @@ export default function BlogIndexPage() {
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                <time
-                  dateTime={article.date}
-                  className="mt-4 block text-xs uppercase tracking-wide text-muted"
-                >
-                  {formatDate(article.date)}
-                </time>
-                <h2 className="font-display mt-2 text-xl font-bold text-foreground transition-colors group-hover:text-accent">
-                  {article.title}
-                </h2>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {article.excerpt}
-                </p>
+                <div className="p-5 sm:p-6">
+                  <time
+                    dateTime={article.date}
+                    className="block text-xs uppercase tracking-wide text-muted"
+                  >
+                    {formatDate(article.date)}
+                  </time>
+                  <h2 className="font-display mt-2 text-xl font-bold text-foreground transition-colors group-hover:text-accent">
+                    {article.title}
+                  </h2>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                    {article.excerpt}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>
