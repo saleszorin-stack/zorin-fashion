@@ -1,28 +1,28 @@
 const reasons = [
   {
-    title: "Один комплекс оборудования на весь цикл",
+    title: "Раскрой — на Gerber, не на глаз",
     description:
-      "Раскройный комплекс Gerber и Julivi, швейное оборудование Juki, Brother, Jack, Pfaff и ASS — из Германии, Японии, Турции и США. Один стандарт на все операции, от раскроя до отделки.",
+      "Крой и конструирование — на системах Gerber и Julivi, пошив — на Juki, Brother, Jack, Pfaff и ASS, отделка — на прессах Indupress и Malkan.",
   },
   {
-    title: "Одни и те же поставщики фурнитуры",
+    title: "Фурнитура — не то, что нашлось к дедлайну",
     description:
-      "Клеевые прокладки, нитки и фурнитуру закупаем в Германии, Беларуси, Турции и Китае — у постоянных поставщиков, а не у тех, кто окажется под рукой к сроку партии.",
+      "Ткани, подклад и фурнитуру закупаем у одних и тех же поставщиков в Германии, Беларуси, Турции и Китае — партия за партией, без замен на скорую руку.",
   },
   {
-    title: "Полная размерная сетка",
+    title: "8 000 костюмов и пиджаков, 10 000 брюк — в месяц",
     description:
-      "От 26-го размера при росте 110 для мальчиков до 72-го при росте 200 для взрослых — детская и мужская линии закрываются на одном производстве.",
+      "Такая мощность костюмно-пиджачной и брючной групп отдельно — хватает и на первую партию, и на регулярные допоставки без потери сроков.",
   },
   {
-    title: "Своя база моделей и работа по вашим лекалам",
+    title: "Три проверки до упаковки",
     description:
-      "Берёте готовую модель из коллекции разработок фабрики — либо мы шьём точно по вашим лекалам и образцу.",
+      "Входной контроль ткани и фурнитуры, контроль в процессе пошива, финальная проверка перед упаковкой — брак отсекается внутри цеха, не на складе клиента.",
   },
   {
-    title: "Три уровня контроля на каждой партии",
+    title: "300 единиц. Свой бренд или наш",
     description:
-      "Входной контроль тканей и фурнитуры, межоперационный контроль в процессе, финальная приёмка готовой продукции — на каждом этапе.",
+      "Минимальная партия — 300 единиц одной модели одного цвета. Нет своего бренда — шьём под зарегистрированным товарным знаком ZORIN; появится свой — переходите на него в любой момент.",
   },
 ];
 
@@ -31,18 +31,23 @@ export function WhyZorin() {
     <section className="border-b border-border">
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
         <h2 className="font-serif max-w-xl text-3xl font-semibold text-foreground sm:text-4xl">
-          Почему выбирают ZORIN
+          Почему выбирают нас
         </h2>
-        <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 lg:grid-cols-3">
+        <div className="mt-6">
           {reasons.map((item) => (
-            <div key={item.title} className="border-t border-border pt-5">
-              <h3 className="font-display text-lg font-bold text-foreground">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
+            <details key={item.title} className="group border-t border-border py-6 last:border-b">
+              <summary className="flex cursor-pointer items-center justify-between gap-4 rounded-sm text-left transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:opacity-70">
+                <span className="font-display text-lg font-bold text-foreground sm:text-xl">
+                  {item.title}
+                </span>
+                <span className="shrink-0 text-2xl font-light leading-none text-muted transition-transform group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
                 {item.description}
               </p>
-            </div>
+            </details>
           ))}
         </div>
       </div>

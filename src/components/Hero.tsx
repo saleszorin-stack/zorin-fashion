@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { site } from "@/lib/site";
 
 export function Hero() {
@@ -36,32 +35,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 sm:px-8 sm:py-16 md:grid-cols-[1.3fr_1fr]">
-        <p className="max-w-xl text-lg leading-relaxed text-muted">
-          ZORIN — надёжный партнёр в поточном производстве мужских
-          костюмов, пиджаков, брюк и жилетов полного цикла, отвечающий за
-          качество каждого изделия и стабильность каждой партии. Работаем
-          с оптовыми партнёрами и корпоративными заказчиками в
-          Кыргызстане, России и Казахстане.
-        </p>
-
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 md:justify-end">
-          <Link
-            href="/kontakty"
-            className="inline-flex items-center rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-[opacity,transform] hover:opacity-85 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-          >
-            Обсудить заказ
-          </Link>
-          <Link
-            href="/produktsiya"
-            className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-          >
-            Смотреть продукцию →
-          </Link>
-        </div>
-      </div>
-
-      <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-x-10 gap-y-6 border-t border-border px-5 py-10 sm:px-8 md:grid-cols-4 md:justify-between">
+      <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-x-10 gap-y-6 px-5 py-10 sm:px-8 md:grid-cols-4 md:justify-between">
         {[
           { value: String(site.stats.foundedYear), label: `На рынке ${age} лет` },
           { value: String(site.stats.employees), label: "Сотрудников" },
