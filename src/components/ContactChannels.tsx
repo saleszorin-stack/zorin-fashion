@@ -11,7 +11,7 @@ import {
   WhatsAppIcon,
 } from "@/components/icons";
 
-const channels = [
+const primaryChannels = [
   {
     icon: PhoneIcon,
     label: "Телефон",
@@ -28,6 +28,9 @@ const channels = [
     external: true,
     goal: "contact_whatsapp",
   },
+] as const;
+
+const secondaryChannels = [
   {
     icon: TelegramIcon,
     label: "Telegram",
@@ -64,25 +67,48 @@ const channels = [
 
 export function ContactChannels() {
   return (
-    <dl className="mt-12 divide-y divide-border border-t border-border">
-      {channels.map((c) => (
-        <div key={c.label} className="flex items-center gap-4 py-5">
-          <c.icon className="h-6 w-6 shrink-0 text-accent" />
-          <dt className="w-24 shrink-0 font-display text-sm font-bold text-foreground sm:w-28">
-            {c.label}
-          </dt>
-          <dd>
-            <a
-              href={c.href}
-              onClick={() => trackGoal(c.goal)}
-              {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className="text-base font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-            >
-              {c.value}
-            </a>
-          </dd>
-        </div>
-      ))}
-    </dl>
+    <div className="mt-12">
+      <dl className="divide-y divide-border border-y border-border">
+        {primaryChannels.map((c) => (
+          <div key={c.label} className="flex items-center gap-4 py-6">
+            <c.icon className="h-7 w-7 shrink-0 text-accent" />
+            <dt className="w-24 shrink-0 font-display text-sm font-bold text-foreground sm:w-28">
+              {c.label}
+            </dt>
+            <dd>
+              <a
+                href={c.href}
+                onClick={() => trackGoal(c.goal)}
+                {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                className="text-lg font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                {c.value}
+              </a>
+            </dd>
+          </div>
+        ))}
+      </dl>
+
+      <dl className="mt-8 divide-y divide-border border-t border-border">
+        {secondaryChannels.map((c) => (
+          <div key={c.label} className="flex items-center gap-4 py-4">
+            <c.icon className="h-5 w-5 shrink-0 text-muted" />
+            <dt className="w-24 shrink-0 font-display text-xs font-bold text-muted sm:w-28">
+              {c.label}
+            </dt>
+            <dd>
+              <a
+                href={c.href}
+                onClick={() => trackGoal(c.goal)}
+                {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                {c.value}
+              </a>
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </div>
   );
 }
