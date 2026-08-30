@@ -72,9 +72,9 @@ export function PartnersAndCases() {
             </div>
           </div>
 
-          <p className="mt-10 border-t border-border pt-6 text-center text-sm text-muted">
+          <p className="font-display mt-10 border-t border-border pt-6 text-center text-lg font-semibold text-foreground/90 sm:text-xl">
             Также среди клиентов: Сударь, Zolla, Stenser, Melon Fashion
-            Group, KiK, Стрекоза.
+            Group, KiK, Стрекоза
           </p>
         </div>
       </div>
