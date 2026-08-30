@@ -162,18 +162,33 @@ export default function OptPage() {
           <p className="eyebrow text-accent">
             Профиль заказчика
           </p>
-          <div className="mt-4 grid gap-6 sm:grid-cols-3">
-            <p className="text-sm leading-relaxed text-muted">
-              Партия от 300 единиц на модель одного цвета — не разовый
-              отшив, а системное размещение заказов.
-            </p>
-            <p className="text-sm leading-relaxed text-muted">
-              Горизонт планирования загрузки производства — 9–12 месяцев.
-            </p>
-            <p className="text-sm leading-relaxed text-muted">
-              Не берём партии меньше 300 единиц на модель одного цвета и
-              заказы бюджетного сегмента.
-            </p>
+          <div className="mt-4 grid gap-8 sm:grid-cols-3">
+            <div>
+              <p className="font-serif text-2xl font-semibold text-foreground">
+                От 300 единиц
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-muted">
+                На модель одного цвета — не разовый отшив, а системное
+                размещение заказов.
+              </p>
+            </div>
+            <div>
+              <p className="font-serif text-2xl font-semibold text-foreground">
+                9–12 месяцев
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-muted">
+                Горизонт планирования загрузки производства.
+              </p>
+            </div>
+            <div>
+              <p className="font-serif text-2xl font-semibold text-foreground">
+                Не берём
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-muted">
+                Партии меньше 300 единиц на модель одного цвета и заказы
+                бюджетного сегмента.
+              </p>
+            </div>
           </div>
         </div>
       </section>
