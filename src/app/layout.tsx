@@ -79,6 +79,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     "@type": "LocalBusiness",
     name: site.name,
     legalName: site.legalName,
+    taxID: site.inn,
     url: site.url,
     email: site.email,
     telephone: site.phones.map((p) => p.raw),
