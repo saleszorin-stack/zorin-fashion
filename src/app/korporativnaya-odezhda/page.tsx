@@ -7,11 +7,12 @@ import { productLines } from "@/lib/nav";
 import { jsonLdScript } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Пошив корпоративной формы и униформы оптом",
+  title: "Пошив корпоративной формы и униформы на заказ",
   description:
-    "Пошив корпоративной формы и униформы для банков, отелей, авиакомпаний и охранных структур на фабрике ZORIN в Бишкеке. Участвуем в тендерах, от 300 единиц на модель одного цвета.",
+    "Пошив корпоративной формы и униформы на заказ для банков, отелей, авиакомпаний и охранных структур на фабрике ZORIN в Бишкеке. Участвуем в тендерах, от 300 единиц на модель одного цвета.",
   keywords: [
     "пошив корпоративной формы оптом",
+    "пошив корпоративной формы на заказ",
     "пошив униформы для банков",
     "пошив униформы для отелей",
     "форма для авиакомпаний пошив",
@@ -64,7 +65,7 @@ export default function KorporativnayaOdezhdaPage() {
         <div className="flex flex-col justify-center bg-accent-soft px-5 py-14 sm:px-8 sm:py-20 md:px-14">
           <p className="eyebrow text-accent">Корпоративным заказчикам</p>
           <h1 className="font-serif mt-4 max-w-md text-4xl font-semibold text-foreground sm:text-5xl">
-            Пошив корпоративной формы и униформы оптом
+            Пошив корпоративной формы и униформы на заказ
           </h1>
         </div>
       </section>
