@@ -28,6 +28,14 @@ const equipment = [
 ];
 
 export default function OFabrikePage() {
+  const age = new Date().getFullYear() - site.stats.foundedYear;
+  const stats = [
+    { value: String(site.stats.foundedYear), label: `Год основания — на рынке ${age} лет` },
+    { value: String(site.stats.employees), label: "Сотрудников" },
+    { value: `${site.stats.areaSqm.toLocaleString("ru-RU")} м²`, label: "Производственная площадь" },
+    { value: `${(site.stats.annualOutput / 1000).toFixed(0)} тыс.`, label: "Комплектов в год" },
+  ];
+
   return (
     <>
       <Breadcrumbs items={[{ label: "О фабрике" }]} />
@@ -54,6 +62,25 @@ export default function OFabrikePage() {
         </div>
       </section>
 
+      <section className="border-b border-border bg-background-panel">
+        <div className="mx-auto max-w-3xl px-5 py-10 sm:px-8">
+          <p className="eyebrow text-accent">Фабрика в цифрах</p>
+          <dl className="mt-4 grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-4">
+            {stats.map((stat) => (
+              <div key={stat.label}>
+                <dt className="sr-only">{stat.label}</dt>
+                <dd className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">
+                  {stat.value}
+                </dd>
+                <dd className="mt-1 text-sm leading-relaxed text-muted">
+                  {stat.label}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
       <section className="border-b border-border">
         <div className="mx-auto max-w-3xl px-5 py-14 sm:px-8 sm:py-20">
           <div className="space-y-6 text-base leading-relaxed text-muted">
@@ -66,12 +93,10 @@ export default function OFabrikePage() {
             <p>
               С самого начала фабрика строилась как производство полного
               цикла: раскрой, конструирование, пошив и финальная отделка
-              идут на одной площадке — {site.stats.areaSqm.toLocaleString("ru-RU")} м²,{" "}
-              {site.stats.employees} сотрудников, включая собственный отдел
-              контроля качества из 4 человек. Заказ не передаётся между
-              случайными подрядчиками на разных этапах, поэтому посадка
-              изделий не меняется от партии к партии — что это значит на
-              практике,{" "}
+              идут на одной площадке, включая собственный отдел контроля
+              качества из 4 человек. Заказ не передаётся между случайными
+              подрядчиками на разных этапах, поэтому посадка изделий не
+              меняется от партии к партии — что это значит на практике,{" "}
               <Link
                 href="/blog/polny-cikl-proizvodstva-odezhdy"
                 className="rounded-sm text-accent underline decoration-2 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:opacity-70"
@@ -81,13 +106,12 @@ export default function OFabrikePage() {
               .
             </p>
             <p>
-              Сегодня фабрика выпускает около{" "}
-              {site.stats.annualOutput.toLocaleString("ru-RU")} комплектов в
-              год для брендов из России, оптовых компаний и заказчиков
-              корпоративной формы. Кыргызстан — страна ЕАЭС, поэтому готовая
-              продукция поставляется в Россию и Казахстан без ввозных
-              таможенных пошлин; налоговые обязательства импортёра
-              сохраняются по правилам страны ввоза.
+              Сегодня фабрика работает с брендами из России, оптовыми
+              компаниями и заказчиками корпоративной формы. Кыргызстан —
+              страна ЕАЭС, поэтому готовая продукция поставляется в
+              Россию и Казахстан без ввозных таможенных пошлин; налоговые
+              обязательства импортёра сохраняются по правилам страны
+              ввоза.
             </p>
           </div>
 
