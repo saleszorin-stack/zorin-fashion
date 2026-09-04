@@ -58,8 +58,8 @@ export function PartnersAndCases() {
               <Image
                 src="/images/partners/sheremetyevo.png"
                 alt="Аэропорт Шереметьево"
-                width={660}
-                height={801}
+                width={746}
+                height={900}
                 className="h-14 w-auto sm:h-16"
               />
               <p className="font-serif mt-3 flex min-h-16 items-center text-2xl font-semibold text-foreground sm:min-h-20 sm:text-3xl">
@@ -73,8 +73,8 @@ export function PartnersAndCases() {
               <Image
                 src="/images/partners/kyrgyz-olympic.png"
                 alt="Олимпийская сборная Кыргызстана"
-                width={353}
-                height={561}
+                width={545}
+                height={900}
                 className="h-14 w-auto sm:h-16"
               />
               <p className="font-serif mt-3 flex min-h-16 items-center text-2xl font-semibold text-foreground sm:min-h-20 sm:text-3xl">
