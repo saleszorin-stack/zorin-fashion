@@ -62,7 +62,7 @@ export function PartnersAndCases() {
                 Форма для персонала
               </p>
             </div>
-            <div className="flex flex-col items-center pt-8 text-center sm:px-8 sm:pt-0">
+            <div className="flex flex-col items-center text-center sm:px-8">
               <p className="font-serif flex min-h-16 items-center text-2xl font-semibold text-foreground sm:min-h-20 sm:text-3xl">
                 Олимпийская сборная Кыргызстана
               </p>
@@ -72,10 +72,31 @@ export function PartnersAndCases() {
             </div>
           </div>
 
-          <p className="font-display mt-10 border-t border-border pt-6 text-center text-lg font-semibold text-foreground/90 sm:text-xl">
-            Также среди клиентов: Сударь, Zolla, Stenser, Melon Fashion
-            Group, KiK, Стрекоза
-          </p>
+          <div className="mt-10 border-t border-border pt-6">
+            <p className="eyebrow text-center text-muted">
+              Также среди клиентов
+            </p>
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-x-8 gap-y-5">
+              {imageClients.map((c) => (
+                <Image
+                  key={c.name}
+                  src={c.src}
+                  alt={c.name}
+                  width={c.width}
+                  height={c.height}
+                  className="h-6 w-auto opacity-80 sm:h-7"
+                />
+              ))}
+              {textOnlyClients.map((name) => (
+                <span
+                  key={name}
+                  className="font-display text-lg font-bold text-foreground/80"
+                >
+                  {name}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
