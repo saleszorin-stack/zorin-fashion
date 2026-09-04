@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     "заказать пошив контакты",
   ],
   alternates: { canonical: "/kontakty" },
+  openGraph: {
+    title: "Контакты — как связаться с ZORIN",
+    description:
+      "Телефон, WhatsApp, Telegram, MAX и email швейной фабрики ZORIN. Адрес производства в Бишкеке. Свяжитесь напрямую с отделом продаж.",
+    url: "/kontakty",
+  },
 };
 
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.address.mapsQuery)}`;

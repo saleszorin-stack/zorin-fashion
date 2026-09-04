@@ -18,6 +18,7 @@ export function Footer() {
           <div className="flex items-center gap-6">
             <Link
               href="/"
+              aria-label="ZORIN — на главную"
               className="rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-invert-background"
             >
               <Logo className="h-6 w-auto text-invert-foreground" />

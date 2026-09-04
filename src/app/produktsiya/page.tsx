@@ -15,13 +15,19 @@ export const metadata: Metadata = {
     "пошив классической мужской одежды",
   ],
   alternates: { canonical: "/produktsiya" },
+  openGraph: {
+    title: "Продукция — мужская классика оптом",
+    description:
+      "Костюмы, пиджаки, брюки, жилеты и школьная форма классического кроя от производителя ZORIN в Бишкеке. Поточное производство полного цикла, от 300 единиц на модель одного цвета.",
+    url: "/produktsiya",
+  },
 };
 
 const highlights = [
   {
     title: "Единое производство",
     description:
-      "Раскрой, пошив и отделка всех линий — на одной площадке в Бишкеке, по единым лекалам и с единым уровнем контроля.",
+      "Раскрой, пошив и отделка всех линий — на одной площадке в Бишкеке и с единым уровнем контроля.",
   },
   {
     title: "Контроль в три этапа",
@@ -134,7 +140,7 @@ export default function ProduktsiyaPage() {
               href="/opt"
               className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
-              Как устроен опт →
+              Условия и процесс →
             </Link>
           </div>
         </div>

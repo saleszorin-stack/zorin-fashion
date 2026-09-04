@@ -14,6 +14,12 @@ export const metadata: Metadata = {
     "производство одежды кыргызстан блог",
   ],
   alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Блог — о пошиве и производстве мужской одежды",
+    description:
+      "Статьи о швейном производстве, оптовом пошиве мужской классики и сотрудничестве с брендами из России от фабрики ZORIN.",
+    url: "/blog",
+  },
 };
 
 function formatDate(iso: string) {

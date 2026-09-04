@@ -151,7 +151,7 @@ export default function KorporativnayaOdezhdaPage() {
               href="/opt"
               className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
-              Как устроен опт →
+              Условия и процесс →
             </Link>
           </div>
         </div>

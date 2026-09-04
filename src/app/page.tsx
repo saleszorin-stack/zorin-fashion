@@ -8,6 +8,8 @@ import { Products } from "@/components/Products";
 import { Wholesale } from "@/components/Wholesale";
 import { Faq } from "@/components/Faq";
 import { faqItems } from "@/lib/faq";
+
+const homeFaqItems = [faqItems[0], faqItems[2], faqItems[5]];
 import { faqPageJsonLd, jsonLdScript } from "@/lib/seo";
 
 export default function Home() {
@@ -28,7 +30,7 @@ export default function Home() {
               href="/kontakty"
               className="inline-flex items-center rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-[opacity,transform] hover:opacity-85 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
-              Оставить заявку
+              Обсудить заказ
             </Link>
             <Link
               href="/produktsiya"
@@ -45,7 +47,7 @@ export default function Home() {
         <WhyZorin />
         <Products />
         <Wholesale />
-        <Faq limit={6} moreHref="/opt#faq" />
+        <Faq items={homeFaqItems} limit={3} moreHref="/opt#faq" />
       </main>
     </>
   );

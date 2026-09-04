@@ -34,7 +34,7 @@ export function Wholesale() {
             href="/opt"
             className="inline-flex items-center rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-[opacity,transform] hover:opacity-85 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            Как устроен опт
+            Условия и процесс →
           </Link>
           <Link
             href="/blog/proizvodstvo-odezhdy-v-kyrgyzstane-dlya-rossii"

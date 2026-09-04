@@ -7,10 +7,7 @@ export function TrustStatement() {
         <p className="font-serif text-balance text-2xl leading-snug sm:text-3xl md:text-4xl">
           90% заказов приходит от постоянных клиентов.
           <br />
-          Старейшему партнёрству — более 15 лет!
-        </p>
-        <p className="eyebrow mt-6 text-invert-foreground/50">
-          Самый честный показатель качества в контрактном производстве
+          Старейшему партнёрству — 17 лет.
         </p>
       </Reveal>
     </section>

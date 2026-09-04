@@ -44,6 +44,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-5 sm:px-8">
         <Link
           href="/"
+          aria-label="ZORIN — на главную"
           className="rounded-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         >
           <Logo className="h-6 w-auto" />

@@ -15,6 +15,12 @@ export const metadata: Metadata = {
     "zorin fashion о компании",
   ],
   alternates: { canonical: "/o-fabrike" },
+  openGraph: {
+    title: "О фабрике — история и производство",
+    description:
+      "ZORIN — швейная фабрика полного цикла в Бишкеке с 1997 года. 160 сотрудников, 1800 м², ~80 000 комплектов в год. История, оборудование, репутация.",
+    url: "/o-fabrike",
+  },
 };
 
 const equipment = [
@@ -94,7 +100,7 @@ export default function OFabrikePage() {
               С самого начала фабрика строилась как производство полного
               цикла: раскрой, конструирование, пошив и финальная отделка
               идут на одной площадке, включая собственный отдел контроля
-              качества из 4 человек. Заказ не передаётся между случайными
+              качества из 4 человек. Заказ не передаётся между сторонними
               подрядчиками на разных этапах, поэтому посадка изделий не
               меняется от партии к партии — что это значит на практике,{" "}
               <Link
@@ -164,13 +170,15 @@ export default function OFabrikePage() {
           <p className="mt-4 text-base leading-relaxed text-muted">
             Среди клиентов — сеть магазинов «Сударь», торговые марки
             Stenser, Magman и «Стрекоза», а также Melon Fashion Group,
-            Zolla и немецкая сеть KiK. С частью партнёров работаем по 17,
-            8 и 5 лет — 90% заказов приходит от постоянных клиентов.
-            Отдельно среди реализованных проектов — форма для аэропорта
-            Шереметьево и парадная форма Олимпийской сборной Кыргызстана.
-            У ZORIN есть собственная зарегистрированная в России торговая
-            марка — заказчики без своего бренда могут выпускать продукцию
-            под ней.
+            Zolla и немецкая сеть KiK. Отдельно среди реализованных
+            проектов — форма для аэропорта Шереметьево и парадная форма
+            Олимпийской сборной Кыргызстана.
+          </p>
+          <p className="mt-4 text-base leading-relaxed text-muted">
+            90% заказов приходит от постоянных клиентов — с частью
+            партнёров работаем по 17, 8 и 5 лет. У ZORIN есть собственная
+            зарегистрированная в России торговая марка — заказчики без
+            своего бренда могут выпускать продукцию под ней.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-x-10 gap-y-6">
             {imageClients.map((c) => (
@@ -198,7 +206,7 @@ export default function OFabrikePage() {
               href="/kontakty"
               className="inline-flex items-center rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-[opacity,transform] hover:opacity-85 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
-              Связаться с фабрикой
+              Обсудить заказ
             </Link>
             <Link
               href="/produktsiya"
@@ -210,7 +218,7 @@ export default function OFabrikePage() {
               href="/opt"
               className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
-              Условия опта →
+              Условия и процесс →
             </Link>
           </div>
         </div>
