@@ -55,7 +55,14 @@ export function PartnersAndCases() {
           </h2>
           <div className="mt-10 grid gap-8 divide-y divide-border sm:grid-cols-2 sm:divide-x sm:divide-y-0">
             <div className="flex flex-col items-center text-center sm:px-8">
-              <p className="font-serif flex min-h-16 items-center text-2xl font-semibold text-foreground sm:min-h-20 sm:text-3xl">
+              <Image
+                src="/images/partners/sheremetyevo.png"
+                alt="Аэропорт Шереметьево"
+                width={660}
+                height={801}
+                className="h-14 w-auto sm:h-16"
+              />
+              <p className="font-serif mt-3 flex min-h-16 items-center text-2xl font-semibold text-foreground sm:min-h-20 sm:text-3xl">
                 Аэропорт Шереметьево
               </p>
               <p className="mt-2 text-sm text-muted">
@@ -63,7 +70,14 @@ export function PartnersAndCases() {
               </p>
             </div>
             <div className="flex flex-col items-center text-center sm:px-8">
-              <p className="font-serif flex min-h-16 items-center text-2xl font-semibold text-foreground sm:min-h-20 sm:text-3xl">
+              <Image
+                src="/images/partners/kyrgyz-olympic.png"
+                alt="Олимпийская сборная Кыргызстана"
+                width={353}
+                height={561}
+                className="h-14 w-auto sm:h-16"
+              />
+              <p className="font-serif mt-3 flex min-h-16 items-center text-2xl font-semibold text-foreground sm:min-h-20 sm:text-3xl">
                 Олимпийская сборная Кыргызстана
               </p>
               <p className="mt-2 text-sm text-muted">
