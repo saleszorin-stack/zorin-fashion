@@ -53,8 +53,8 @@ export function PartnersAndCases() {
           <h2 className="font-serif text-balance text-center text-3xl font-semibold text-foreground sm:text-4xl">
             Наши партнёры и проекты
           </h2>
-          <div className="mt-10 grid gap-8 divide-y divide-border sm:grid-cols-2 sm:divide-x sm:divide-y-0">
-            <div className="flex flex-col items-center text-center sm:px-8">
+          <div className="mt-10 grid divide-y divide-border sm:grid-cols-2 sm:gap-8 sm:divide-x sm:divide-y-0">
+            <div className="flex flex-col items-center pb-8 text-center sm:px-8 sm:pb-0">
               <Image
                 src="/images/partners/sheremetyevo.png"
                 alt="Аэропорт Шереметьево"
@@ -69,7 +69,7 @@ export function PartnersAndCases() {
                 Форма для персонала
               </p>
             </div>
-            <div className="flex flex-col items-center text-center sm:px-8">
+            <div className="flex flex-col items-center pt-8 text-center sm:px-8 sm:pt-0">
               <Image
                 src="/images/partners/kyrgyz-olympic.png"
                 alt="Олимпийская сборная Кыргызстана"
@@ -86,7 +86,7 @@ export function PartnersAndCases() {
             </div>
           </div>
 
-          <div className="mt-10 border-t border-border pt-6">
+          <div className="mt-8 border-t border-border pt-6">
             <p className="eyebrow text-center text-muted">
               Также среди клиентов
             </p>
