@@ -96,6 +96,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       postalCode: site.address.postalCode,
       addressCountry: "KG",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: site.address.geo.latitude,
+      longitude: site.address.geo.longitude,
+    },
     areaServed: ["Кыргызстан", "Россия", "Казахстан"],
     knowsAbout: [
       "Мужские костюмы",

@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   },
 };
 
-const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.address.mapsQuery)}`;
+const { latitude, longitude } = site.address.geo;
+const mapsHref = `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
 
 export default function KontaktyPage() {
   return (
@@ -61,7 +62,7 @@ export default function KontaktyPage() {
 
             <div className="relative mt-12 aspect-[4/3] overflow-hidden rounded-xl lg:mt-16">
               <iframe
-                src={`https://www.google.com/maps?q=${encodeURIComponent(site.address.mapsQuery)}&output=embed`}
+                src={`https://www.google.com/maps?q=${latitude},${longitude}&output=embed`}
                 className="h-full w-full border-0 invert-[90%] hue-rotate-180"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
