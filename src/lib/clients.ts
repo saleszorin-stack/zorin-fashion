@@ -5,7 +5,6 @@ export const imageClients = [
   { name: "Melon Fashion Group", src: "/images/partners/melon.png", width: 737, height: 240 },
   { name: "Zolla", src: "/images/partners/zolla.png", width: 640, height: 240 },
   { name: "KiK", src: "/images/partners/kik.png", width: 239, height: 240 },
-  { name: "Magman", src: "/images/partners/magman.png", width: 900, height: 172 },
 ] as const;
 
 export const textOnlyClients = [] as const;

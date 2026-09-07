@@ -3,6 +3,24 @@ import { imageClients, textOnlyClients } from "@/lib/clients";
 
 const track = [...imageClients, ...imageClients];
 
+const allPartners = [
+  {
+    name: "Аэропорт Шереметьево",
+    caption: "Форма для персонала",
+    src: "/images/partners/sheremetyevo.png",
+    width: 746,
+    height: 900,
+  },
+  {
+    name: "Олимпийская сборная Кыргызстана",
+    caption: "Парадная форма",
+    src: "/images/partners/kyrgyz-olympic.png",
+    width: 545,
+    height: 900,
+  },
+  ...imageClients.map((c) => ({ ...c, caption: null as string | null })),
+];
+
 function LogoRow({ reverse = false }: { reverse?: boolean }) {
   return (
     <div
@@ -53,63 +71,31 @@ export function PartnersAndCases() {
           <h2 className="font-serif text-balance text-center text-3xl font-semibold text-foreground sm:text-4xl">
             Наши партнёры и проекты
           </h2>
-          <div className="mt-10 grid divide-y divide-border sm:grid-cols-2 sm:gap-8 sm:divide-x sm:divide-y-0">
-            <div className="flex flex-col items-center pb-8 text-center sm:px-8 sm:pb-0">
-              <Image
-                src="/images/partners/sheremetyevo.png"
-                alt="Аэропорт Шереметьево"
-                width={746}
-                height={900}
-                className="h-14 w-auto sm:h-16"
-              />
-              <p className="font-serif mt-3 flex min-h-16 items-center text-2xl font-semibold text-foreground sm:min-h-20 sm:text-3xl">
-                Аэропорт Шереметьево
-              </p>
-              <p className="mt-2 text-sm text-muted">
-                Форма для персонала
-              </p>
-            </div>
-            <div className="flex flex-col items-center pt-8 text-center sm:px-8 sm:pt-0">
-              <Image
-                src="/images/partners/kyrgyz-olympic.png"
-                alt="Олимпийская сборная Кыргызстана"
-                width={545}
-                height={900}
-                className="h-14 w-auto sm:h-16"
-              />
-              <p className="font-serif mt-3 flex min-h-16 items-center text-2xl font-semibold text-foreground sm:min-h-20 sm:text-3xl">
-                Олимпийская сборная Кыргызстана
-              </p>
-              <p className="mt-2 text-sm text-muted">
-                Парадная форма
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8 border-t border-border pt-6">
-            <p className="eyebrow text-center text-muted">
-              Также среди клиентов
-            </p>
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-x-8 gap-y-5">
-              {imageClients.map((c) => (
+          <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-9 sm:grid-cols-4">
+            {allPartners.map((c) => (
+              <div key={c.name} className="flex flex-col items-center text-center">
                 <Image
-                  key={c.name}
                   src={c.src}
                   alt={c.name}
                   width={c.width}
                   height={c.height}
-                  className="h-6 w-auto opacity-80 sm:h-7"
+                  className="h-9 w-auto opacity-90 sm:h-10"
                 />
-              ))}
-              {textOnlyClients.map((name) => (
-                <span
-                  key={name}
-                  className="font-display text-lg font-bold text-foreground/80"
-                >
+                <p className="font-display mt-3 text-xs font-bold text-foreground/85 sm:text-sm">
+                  {c.name}
+                </p>
+                {c.caption && (
+                  <p className="mt-1 text-xs text-muted">{c.caption}</p>
+                )}
+              </div>
+            ))}
+            {textOnlyClients.map((name) => (
+              <div key={name} className="flex flex-col items-center justify-center text-center">
+                <span className="font-display text-lg font-bold text-foreground/80">
                   {name}
                 </span>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
