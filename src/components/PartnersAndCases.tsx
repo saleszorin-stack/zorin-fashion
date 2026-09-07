@@ -6,19 +6,17 @@ const track = [...imageClients, ...imageClients];
 const allPartners = [
   {
     name: "Аэропорт Шереметьево",
-    caption: "Форма для персонала",
     src: "/images/partners/sheremetyevo.png",
     width: 746,
     height: 900,
   },
   {
     name: "Олимпийская сборная Кыргызстана",
-    caption: "Парадная форма",
     src: "/images/partners/kyrgyz-olympic.png",
     width: 545,
     height: 900,
   },
-  ...imageClients.map((c) => ({ ...c, caption: null as string | null })),
+  ...imageClients,
 ];
 
 function LogoRow({ reverse = false }: { reverse?: boolean }) {
@@ -84,9 +82,6 @@ export function PartnersAndCases() {
                 <p className="font-display mt-3 text-xs font-bold text-foreground/85 sm:text-sm">
                   {c.name}
                 </p>
-                {c.caption && (
-                  <p className="mt-1 text-xs text-muted">{c.caption}</p>
-                )}
               </div>
             ))}
             {textOnlyClients.map((name) => (
