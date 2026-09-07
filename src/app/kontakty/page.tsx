@@ -33,7 +33,7 @@ export default function KontaktyPage() {
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
           <p className="eyebrow text-accent">Контакты</p>
           <h1 className="font-serif mt-4 max-w-2xl text-4xl font-semibold text-foreground sm:text-5xl">
-            Свяжитесь с производством
+            Свяжитесь с производством.
           </h1>
           <p className="mt-4 max-w-lg text-base leading-relaxed text-muted">
             Оптовые заказы и сотрудничество — {site.contactPerson}. Выберите
