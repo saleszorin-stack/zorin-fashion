@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ProductPageContent } from "@/components/ProductPageContent";
 import { products } from "@/lib/products";
+import { ogImages, ogMeta } from "@/lib/seo";
 
 const product = products.find((p) => p.slug === "kostyumy")!;
 
@@ -9,11 +10,12 @@ export const metadata: Metadata = {
   description: product.metaDescription,
   keywords: product.keywords,
   alternates: { canonical: "/kostyumy" },
-  openGraph: {
+  ...ogMeta({
     title: product.metaTitle,
     description: product.metaDescription,
-    url: "/kostyumy",
-  },
+    path: "/kostyumy",
+    image: ogImages.suits,
+  }),
 };
 
 export default function Page() {

@@ -4,23 +4,22 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { site } from "@/lib/site";
 import { imageClients, textOnlyClients } from "@/lib/clients";
+import { ogImages, ogMeta } from "@/lib/seo";
+
+const title = "О фабрике — история и производство";
+const description =
+  "ZORIN — швейная фабрика полного цикла в Бишкеке с 1997 года. 160 сотрудников, 1800 м², ~80 000 комплектов в год. История, оборудование, репутация.";
 
 export const metadata: Metadata = {
-  title: "О фабрике — история и производство",
-  description:
-    "ZORIN — швейная фабрика полного цикла в Бишкеке с 1997 года. 160 сотрудников, 1800 м², ~80 000 комплектов в год. История, оборудование, репутация.",
+  title,
+  description,
   keywords: [
     "швейная фабрика бишкек история",
     "производство мужской одежды кыргызстан",
     "zorin fashion о компании",
   ],
   alternates: { canonical: "/o-fabrike" },
-  openGraph: {
-    title: "О фабрике — история и производство",
-    description:
-      "ZORIN — швейная фабрика полного цикла в Бишкеке с 1997 года. 160 сотрудников, 1800 м², ~80 000 комплектов в год. История, оборудование, репутация.",
-    url: "/o-fabrike",
-  },
+  ...ogMeta({ title, description, path: "/o-fabrike", image: ogImages.ofabrike }),
 };
 
 const equipment = [

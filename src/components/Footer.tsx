@@ -1,13 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { Logo } from "@/components/Logo";
 import { MaxIcon, TelegramIcon, WhatsAppIcon, InstagramIcon } from "@/components/icons";
+import { trackGoal } from "@/lib/metrika";
 
 const socialLinks = [
-  { icon: WhatsAppIcon, href: site.whatsapp, label: "WhatsApp" },
-  { icon: TelegramIcon, href: site.telegram, label: "Telegram" },
-  { icon: MaxIcon, href: site.max, label: "MAX" },
-  { icon: InstagramIcon, href: site.instagram, label: "Instagram" },
+  { icon: WhatsAppIcon, href: site.whatsapp, label: "WhatsApp", goal: "contact_whatsapp" },
+  { icon: TelegramIcon, href: site.telegram, label: "Telegram", goal: "contact_telegram" },
+  { icon: MaxIcon, href: site.max, label: "MAX", goal: "contact_max" },
+  { icon: InstagramIcon, href: site.instagram, label: "Instagram", goal: "contact_instagram" },
 ] as const;
 
 export function Footer() {
@@ -36,6 +39,7 @@ export function Footer() {
               <a
                 key={s.label}
                 href={s.href}
+                onClick={() => trackGoal(s.goal)}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}

@@ -4,12 +4,15 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { site } from "@/lib/site";
 import { productLines } from "@/lib/nav";
-import { jsonLdScript } from "@/lib/seo";
+import { jsonLdScript, ogImages, ogMeta } from "@/lib/seo";
+
+const title = "Пошив корпоративной формы и униформы на заказ";
+const description =
+  "Пошив корпоративной формы и униформы на заказ для банков, отелей, авиакомпаний и охранных структур на фабрике ZORIN в Бишкеке. Участвуем в тендерах, от 300 единиц на модель одного цвета.";
 
 export const metadata: Metadata = {
-  title: "Пошив корпоративной формы и униформы на заказ",
-  description:
-    "Пошив корпоративной формы и униформы на заказ для банков, отелей, авиакомпаний и охранных структур на фабрике ZORIN в Бишкеке. Участвуем в тендерах, от 300 единиц на модель одного цвета.",
+  title,
+  description,
   keywords: [
     "пошив корпоративной формы оптом",
     "пошив корпоративной формы на заказ",
@@ -19,6 +22,12 @@ export const metadata: Metadata = {
     "униформа для охранных структур",
   ],
   alternates: { canonical: "/korporativnaya-odezhda" },
+  ...ogMeta({
+    title,
+    description,
+    path: "/korporativnaya-odezhda",
+    image: ogImages.suits,
+  }),
 };
 
 const industries = [

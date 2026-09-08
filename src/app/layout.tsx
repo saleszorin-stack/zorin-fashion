@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { HeaderSpacer } from "@/components/HeaderSpacer";
 import { Footer } from "@/components/Footer";
 import { site, YANDEX_METRIKA_ID } from "@/lib/site";
+import { ogImages } from "@/lib/seo";
 
 const manrope = Manrope({
   variable: "--font-body",
@@ -56,13 +57,13 @@ export const metadata: Metadata = {
     siteName: "ZORIN",
     title,
     description,
-    images: [{ url: "/images/hero.jpg", width: 1200, height: 800, alt: title }],
+    images: [{ ...ogImages.hero, alt: title }],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: ["/images/hero.jpg"],
+    images: [ogImages.hero.url],
   },
   robots: {
     index: true,
@@ -153,9 +154,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </a>
         <Header />
         <HeaderSpacer />
-        <div id="main-content" tabIndex={-1} className="flex-1 focus:outline-none">
+        <main id="main-content" tabIndex={-1} className="flex-1 focus:outline-none">
           {children}
-        </div>
+        </main>
         <Footer />
       </body>
     </html>

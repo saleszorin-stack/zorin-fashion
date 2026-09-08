@@ -6,7 +6,7 @@ export function About() {
   return (
     <section id="about" className="border-b border-border">
       <Reveal className="grid md:grid-cols-2">
-        <div className="relative h-72 md:h-auto">
+        <div className="relative h-72 min-w-0 md:h-auto">
           <Image
             src="/images/about.jpg"
             alt="Готовый костюм на манекене в мастерской"
@@ -16,7 +16,7 @@ export function About() {
           />
         </div>
 
-        <div className="flex flex-col justify-center bg-accent-soft px-5 py-14 sm:px-8 sm:py-20 md:px-14">
+        <div className="flex min-w-0 flex-col justify-center bg-accent-soft px-5 py-14 sm:px-8 sm:py-20 md:px-14">
           <p className="eyebrow text-accent">
             О производстве
           </p>

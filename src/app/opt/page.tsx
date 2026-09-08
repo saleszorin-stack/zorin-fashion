@@ -4,12 +4,15 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Faq } from "@/components/Faq";
 import { faqItems } from "@/lib/faq";
-import { faqPageJsonLd, jsonLdScript } from "@/lib/seo";
+import { faqPageJsonLd, jsonLdScript, ogImages, ogMeta } from "@/lib/seo";
+
+const title = "Пошив одежды на заказ и оптом — условия опта";
+const description =
+  "Оптовый пошив и контрактное производство одежды на заказ на фабрике ZORIN в Кыргызстане: от 300 единиц на модель одного цвета, реальный процесс из 10 шагов, коммерческие условия, что входит в стоимость.";
 
 export const metadata: Metadata = {
-  title: "Пошив одежды на заказ и оптом — условия опта",
-  description:
-    "Оптовый пошив и контрактное производство одежды на заказ на фабрике ZORIN в Кыргызстане: от 300 единиц на модель одного цвета, реальный процесс из 10 шагов, коммерческие условия, что входит в стоимость.",
+  title,
+  description,
   keywords: [
     "оптовый пошив одежды кыргызстан",
     "заказать пошив партии одежды бишкек",
@@ -20,12 +23,7 @@ export const metadata: Metadata = {
     "аутсорсинг пошива одежды",
   ],
   alternates: { canonical: "/opt" },
-  openGraph: {
-    title: "Пошив одежды на заказ и оптом — условия опта",
-    description:
-      "Оптовый пошив и контрактное производство одежды на заказ на фабрике ZORIN в Кыргызстане: от 300 единиц на модель одного цвета, реальный процесс из 10 шагов, коммерческие условия, что входит в стоимость.",
-    url: "/opt",
-  },
+  ...ogMeta({ title, description, path: "/opt", image: ogImages.wholesale }),
 };
 
 const steps = [

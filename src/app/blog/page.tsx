@@ -3,23 +3,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { articles } from "@/lib/articles";
+import { ogMeta } from "@/lib/seo";
+
+const title = "Блог — о пошиве и производстве мужской одежды";
+const description =
+  "Статьи о швейном производстве, оптовом пошиве мужской классики и сотрудничестве с брендами из России от фабрики ZORIN.";
 
 export const metadata: Metadata = {
-  title: "Блог — о пошиве и производстве мужской одежды",
-  description:
-    "Статьи о швейном производстве, оптовом пошиве мужской классики и сотрудничестве с брендами из России от фабрики ZORIN.",
+  title,
+  description,
   keywords: [
     "блог о пошиве одежды",
     "швейное производство статьи",
     "производство одежды кыргызстан блог",
   ],
   alternates: { canonical: "/blog" },
-  openGraph: {
-    title: "Блог — о пошиве и производстве мужской одежды",
-    description:
-      "Статьи о швейном производстве, оптовом пошиве мужской классики и сотрудничестве с брендами из России от фабрики ZORIN.",
-    url: "/blog",
-  },
+  ...ogMeta({ title, description, path: "/blog" }),
 };
 
 function formatDate(iso: string) {

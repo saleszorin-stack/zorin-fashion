@@ -18,12 +18,12 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-transparent" />
 
         <div className="relative mx-auto flex h-full max-w-6xl items-center px-5 sm:px-8">
-          <div className="max-w-xl border-l-2 border-white/40 pl-6 sm:pl-8">
+          <div className="min-w-0 max-w-xl border-l-2 border-white/40 pl-6 sm:pl-8">
             <p className="eyebrow text-white/70">
               Швейная фабрика · Бишкек · с {site.stats.foundedYear} года
             </p>
 
-            <h1 className="font-serif text-balance mt-5 text-5xl font-semibold leading-[1.05] text-white sm:text-6xl md:text-7xl">
+            <h1 className="font-serif text-balance mt-5 text-4xl font-semibold leading-[1.05] text-white sm:text-6xl md:text-7xl">
               Контрактный пошив
               <br />
               мужской классики

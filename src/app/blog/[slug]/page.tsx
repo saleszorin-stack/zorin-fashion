@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { site } from "@/lib/site";
 import { articles } from "@/lib/articles";
-import { jsonLdScript } from "@/lib/seo";
+import { jsonLdScript, ogMeta } from "@/lib/seo";
 
 export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
@@ -18,18 +18,24 @@ export async function generateMetadata({
   const article = articles.find((a) => a.slug === slug);
   if (!article) return {};
 
+  const og = ogMeta({
+    title: article.title,
+    description: article.description,
+    path: `/blog/${article.slug}`,
+    image: { url: article.image },
+  });
+
   return {
     title: article.title,
     description: article.description,
     keywords: article.keywords,
     alternates: { canonical: `/blog/${article.slug}` },
     openGraph: {
+      ...og.openGraph,
       type: "article",
-      title: article.title,
-      description: article.description,
-      url: `/blog/${article.slug}`,
       publishedTime: article.date,
     },
+    twitter: og.twitter,
   };
 }
 

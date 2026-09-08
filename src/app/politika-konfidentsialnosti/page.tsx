@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { site } from "@/lib/site";
+import { ogMeta } from "@/lib/seo";
+
+const title = "Политика конфиденциальности";
+const description =
+  "Политика конфиденциальности сайта ZORIN — какие данные собираются, как обрабатываются и с какой целью.";
 
 export const metadata: Metadata = {
-  title: "Политика конфиденциальности",
-  description:
-    "Политика конфиденциальности сайта ZORIN — какие данные собираются, как обрабатываются и с какой целью.",
+  title,
+  description,
   alternates: { canonical: "/politika-konfidentsialnosti" },
   robots: { index: false, follow: true },
+  ...ogMeta({ title, description, path: "/politika-konfidentsialnosti" }),
 };
 
 export default function PolitikaKonfidentsialnostiPage() {

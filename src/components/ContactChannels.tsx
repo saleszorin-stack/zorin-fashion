@@ -75,12 +75,12 @@ export function ContactChannels() {
             <dt className="w-24 shrink-0 font-display text-sm font-bold text-foreground sm:w-28">
               {c.label}
             </dt>
-            <dd>
+            <dd className="min-w-0">
               <a
                 href={c.href}
                 onClick={() => trackGoal(c.goal)}
                 {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                className="text-lg font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                className="break-words text-lg font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 {c.value}
               </a>
@@ -96,12 +96,12 @@ export function ContactChannels() {
             <dt className="w-24 shrink-0 font-display text-xs font-bold text-muted sm:w-28">
               {c.label}
             </dt>
-            <dd>
+            <dd className="min-w-0">
               <a
                 href={c.href}
                 onClick={() => trackGoal(c.goal)}
                 {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                className="text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                className="break-words text-sm font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 transition-opacity hover:opacity-70 active:opacity-50 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
                 {c.value}
               </a>

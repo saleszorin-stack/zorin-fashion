@@ -2,23 +2,22 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContactChannels } from "@/components/ContactChannels";
 import { site } from "@/lib/site";
+import { ogMeta } from "@/lib/seo";
+
+const title = "Контакты фабрики";
+const description =
+  "Телефон, WhatsApp, Telegram, MAX и email швейной фабрики ZORIN. Адрес производства в Бишкеке. Свяжитесь напрямую с отделом продаж.";
 
 export const metadata: Metadata = {
-  title: "Контакты — как связаться с ZORIN",
-  description:
-    "Телефон, WhatsApp, Telegram, MAX и email швейной фабрики ZORIN. Адрес производства в Бишкеке. Свяжитесь напрямую с отделом продаж.",
+  title,
+  description,
   keywords: [
     "контакты zorin fashion",
     "швейная фабрика бишкек телефон",
     "заказать пошив контакты",
   ],
   alternates: { canonical: "/kontakty" },
-  openGraph: {
-    title: "Контакты — как связаться с ZORIN",
-    description:
-      "Телефон, WhatsApp, Telegram, MAX и email швейной фабрики ZORIN. Адрес производства в Бишкеке. Свяжитесь напрямую с отделом продаж.",
-    url: "/kontakty",
-  },
+  ...ogMeta({ title: "Контакты — как связаться с ZORIN", description, path: "/kontakty" }),
 };
 
 const { latitude, longitude } = site.address.geo;
@@ -41,7 +40,7 @@ export default function KontaktyPage() {
           </p>
 
           <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
-            <div>
+            <div className="min-w-0">
               <ContactChannels />
 
               <div className="mt-14 border-t border-border pt-10">
