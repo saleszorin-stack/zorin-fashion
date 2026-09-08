@@ -3,11 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { products } from "@/lib/products";
+import { ogMeta } from "@/lib/seo";
+
+const title = "Продукция — мужская классика оптом";
+const description =
+  "Костюмы, пиджаки, брюки, жилеты и школьная форма классического кроя от производителя ZORIN в Бишкеке. Поточное производство полного цикла, от 300 единиц на модель одного цвета.";
 
 export const metadata: Metadata = {
-  title: "Продукция — мужская классика оптом",
-  description:
-    "Костюмы, пиджаки, брюки, жилеты и школьная форма классического кроя от производителя ZORIN в Бишкеке. Поточное производство полного цикла, от 300 единиц на модель одного цвета.",
+  title,
+  description,
   keywords: [
     "мужская одежда оптом кыргызстан",
     "производитель мужской классики бишкек",
@@ -15,12 +19,7 @@ export const metadata: Metadata = {
     "пошив классической мужской одежды",
   ],
   alternates: { canonical: "/produktsiya" },
-  openGraph: {
-    title: "Продукция — мужская классика оптом",
-    description:
-      "Костюмы, пиджаки, брюки, жилеты и школьная форма классического кроя от производителя ZORIN в Бишкеке. Поточное производство полного цикла, от 300 единиц на модель одного цвета.",
-    url: "/produktsiya",
-  },
+  ...ogMeta({ title, description, path: "/produktsiya" }),
 };
 
 const highlights = [
@@ -42,7 +41,7 @@ const highlights = [
   {
     title: "Пошив под брендом",
     description:
-      "OEM, ODM, private label или отшив под собственной зарегистрированной торговой маркой ZORIN, если своего бренда пока нет.",
+      "OEM, ODM, private label или отшив под собственной зарегистрированной торговой маркой фабрики, если своего бренда пока нет.",
   },
 ];
 

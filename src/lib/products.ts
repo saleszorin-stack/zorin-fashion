@@ -58,7 +58,7 @@ export const products: ProductDetail[] = [
       {
         title: "Пошив под брендом",
         description:
-          "OEM, ODM, private label или отшив под собственной зарегистрированной торговой маркой ZORIN, если своего бренда пока нет.",
+          "OEM, ODM, private label или отшив под собственной зарегистрированной торговой маркой фабрики, если своего бренда пока нет.",
       },
     ],
     specs: [
@@ -226,7 +226,7 @@ export const products: ProductDetail[] = [
       {
         title: "Пошив под брендом",
         description:
-          "OEM, private label или отшив под собственной торговой маркой ZORIN.",
+          "OEM, private label или отшив под собственной торговой маркой фабрики.",
       },
     ],
     specs: [
@@ -285,7 +285,7 @@ export const products: ProductDetail[] = [
       {
         title: "Пошив под брендом",
         description:
-          "OEM, private label или отшив под собственной торговой маркой ZORIN.",
+          "OEM, private label или отшив под собственной торговой маркой фабрики.",
       },
     ],
     specs: [
