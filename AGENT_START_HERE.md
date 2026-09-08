@@ -977,7 +977,9 @@ SVG path с `fill-rule="evenodd"`.
 
 - `src/lib/site.ts` — **главный источник фактов**: контакты, юр. лицо
   (`legalName`, `inn`), `stats` (foundedYear/employees/areaSqm/annualOutput),
-  `whatsapp`/`telegram`/`contactPerson`. `email: null` — намеренно, см. ниже
+  `whatsapp`/`telegram`/`contactPerson`, `email` (реальный адрес заказчика;
+  раньше был `null`, пока адрес не появился — см. «Открытые вопросы» ниже,
+  вопрос закрыт)
 - `src/lib/products.ts` — 4 линии продукции, у каждой `specs[]` (MOQ/срок/цена)
   для таблицы на странице товара
 - `src/lib/faq.ts` — `faqItems`, 14 реальных вопросов из брифа (было 5
@@ -989,7 +991,6 @@ SVG path с `fill-rule="evenodd"`.
 - `src/components/ProductPageContent.tsx` — общий шаблон для 4 товарных
   страниц, включая таблицу `specs`
 - `src/app/layout.tsx` — JSON-LD `LocalBusiness` собирается из `site.ts`
-  (`email` подставляется условно, только если не `null`)
 
 ## Зарезервированные места под материалы от клиента
 
@@ -1066,11 +1067,6 @@ npm run lint    # проверка перед коммитом
 
 ## Открытые вопросы (не выдумывать ответ — спросить/сверить с клиентом)
 
-- **Email не работает.** В брифе прямо написано: «будет зарегистрирован
-  отдельно — нужен корпоративный адрес на домене». `site.email = null`,
-  на сайте email нигде не показывается (заменено на WhatsApp/Telegram).
-  Как только появится реальный адрес — вписать в `site.ts` и вернуть в
-  `Contacts.tsx`/`Footer.tsx`.
 - **«Zorin Fashion» vs «ZORIN».** В брифе зарегистрированная торговая
   марка — «ZORIN». Сайт по-прежнему использует «Zorin Fashion» как
   рабочее название в текстах/title (домен тоже zorin-fashion.com) —
